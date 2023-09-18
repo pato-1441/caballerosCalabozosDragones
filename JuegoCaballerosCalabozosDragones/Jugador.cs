@@ -53,15 +53,16 @@ namespace JuegoCaballerosCalabozosDragones
 
         public int MoverPieza(int cantidad, Casilla casillaActual)
         {
-            int VariableQueNoSEQueHace = 0;
+            int resultado = 0;
             if(pierdeTurno == false)
             {
                 ultimoMovimiento = caballero.Mover(cantidad);
-                switch (RevisarCasilla(casillaActual))
+                resultado = RevisarCasilla(casillaActual);
+                switch (resultado)
                 {
                     case 0: break;
                     case 1: caballero.Mover(5); break; //adelanta 5 posiciones
-                    case 2:  break;//muere
+                    case 2: break;//muere
                     case 3: caballero.Mover(-5); break; //retrocede 5 posiciones
                     case 4: pierdeTurno = true; break;//pierde turno
                 }
@@ -69,13 +70,9 @@ namespace JuegoCaballerosCalabozosDragones
             else
             {
                 pierdeTurno =false;
+                resultado = 5;
             }
-            return VariableQueNoSEQueHace;
-        }
-
-        private void Mover(int cantidad)
-        {
-
+            return resultado;
         }
 
         private int RevisarCasilla(Casilla casillaActual)

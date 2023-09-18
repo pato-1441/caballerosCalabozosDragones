@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace JuegoCaballerosCalabozosDragones
     {
         Casilla[] tablero = new Casilla[51] ;
         Pieza[] calabozos;
-        Jugador[] jugadores;
+        ArrayList jugadores;
         int turno=0;
         bool demo;
         int dificultad;
@@ -20,7 +21,7 @@ namespace JuegoCaballerosCalabozosDragones
         //CREAMOS JUGADORES VIRTUALES Y HUMANO
         public Partida(int cantJugadores, int dificultad, string nombreJugador, int colorCaballero)
         {
-            jugadores = new Jugador[cantJugadores];
+            jugadores = new ArrayList();
             demo = false;
             this.dificultad = dificultad;
             CrearJugadorHumano(nombreJugador, colorCaballero);
@@ -32,23 +33,29 @@ namespace JuegoCaballerosCalabozosDragones
         //SOLO CREAMOS JUGADORES VIRTUALES
         public Partida(int cantJugadores, int dificultad)
         {
-            jugadores = new Jugador[cantJugadores];
+            jugadores = new ArrayList();
             demo = true;
             this.dificultad = dificultad;
             CrearJugadoresVirtuales(cantJugadores, demo);
         }
 
 
-        public void Jugar() 
+        public int Jugar() 
         {
+            
             //tirar el dado y moverse
             int movimiento = dado.Next(1, 7);
-            jugadores[turno].MoverPieza(movimiento);
-            //revisar casilla
-            int control=jugadores[turno].RevisarCasilla();
-            switch()
+            int moverPieza = ((Jugador)jugadores[turno]).MoverPieza(movimiento, (tablero[((Jugador)jugadores[turno]).Caballero.Posicion + movimiento]));
+            if (moverPieza == 2)
+            {
+                jugadores.RemoveAt(turno);
+            }
+            if (turno == (jugadores.Count - 1))
+            {
+                turno = 0;
+            }else turno++;
             //si es necesario, volver a moverse
-        
+            return moverPieza;
         }
 
 
@@ -59,9 +66,9 @@ namespace JuegoCaballerosCalabozosDragones
                 for (int i = 0; i < cantidadJugadores; i++)
                 {
                     
-                    string nombreJugador = "Jugador" + (i+1);
+                    string nombreJugador = "Virtual " + (i+1);
                     Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1);
-                    jugadores[i] = jugador;
+                    jugadores.Add(jugador);
                     
                 }
             }
@@ -70,9 +77,9 @@ namespace JuegoCaballerosCalabozosDragones
                 
                 for (int i = 0; i < cantidadJugadores - 1; i++)
                 {
-                    string nombreJugador = "Jugador" + (i+1);
+                    string nombreJugador = "Virtual " + (i+1);
                     Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1);
-                    jugadores[i+1] = jugador;
+                    jugadores.Add(jugador);
                 }
             }
                
