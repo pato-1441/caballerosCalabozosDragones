@@ -9,31 +9,38 @@ namespace JuegoCaballerosCalabozosDragones
     internal class Partida
     {
         Casilla[] tablero = new Casilla[51] ;
+        Pieza[] calabozos;
         Jugador[] jugadores;
         int turno=0;
         bool demo;
         int dificultad;
+        Jugador ganador = null;
 
         //CREAMOS JUGADORES VIRTUALES Y HUMANO
-        public Partida(int cantJugadores, int dificultad, bool demo, string nombreJugador, int colorCaballero)
+        public Partida(int cantJugadores, int dificultad, string nombreJugador, int colorCaballero)
         {
             jugadores = new Jugador[cantJugadores];
-            this.demo = demo;
+            demo = false;
             this.dificultad = dificultad;
             CrearJugadorHumano(nombreJugador, colorCaballero);
             CrearJugadoresVirtuales(cantJugadores, demo);
-            
+            CrearCalabozos();
            
         }
 
         //SOLO CREAMOS JUGADORES VIRTUALES
-        public Partida(int cantJugadores, int dificultad, bool demo)
+        public Partida(int cantJugadores, int dificultad)
         {
             jugadores = new Jugador[cantJugadores];
-            this.demo = demo;
+            demo = true;
             this.dificultad = dificultad;
             CrearJugadoresVirtuales(cantJugadores, demo);
         }
+
+        public void Jugar() { 
+        
+        }
+
 
         private void CrearJugadoresVirtuales(int cantidadJugadores, bool demo)
         {
@@ -67,7 +74,29 @@ namespace JuegoCaballerosCalabozosDragones
         {
             jugadores[0] = new Jugador(nombre, true, dificultad, color);
         }
+        
+        private void CrearCalabozos()
+        {
+            if (dificultad > 1)
+            {
+                calabozos = new Pieza[3];
+                for(int i = 0; i < 3; i++)
+                {
+                    calabozos[i]=new Pieza();
+                    tablero[calabozos[i].Mover()].AgregarCalabozo();
+                }
+            }
+        }
 
+        private bool VerificarGanador()
+        {
+            bool hayGanador=false;
+            if(ganador != null)
+            {
+                hayGanador = true;
+            }
+            return hayGanador;  
+        }
 
     }
 

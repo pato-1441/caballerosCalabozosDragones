@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,19 @@ namespace JuegoCaballerosCalabozosDragones
 {
     internal class Sistema
     {
+        ArrayList ranking=new ArrayList();
+        Partida partidaActual;
+        public ArrayList Ranking { get { return ranking; } }
+        public Partida PartidaActual { get {  return partidaActual; } }
+        public void OrdenarRanking()
+        {
+            ranking.Sort();
+            ranking.Reverse();
+        }
+        
+        public void CrearPartida(int cantidadJugadores, int modoJuego)
+        {
+            partidaActual = new Partida(cantidadJugadores, modoJuego);
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace JuegoCaballerosCalabozosDragones
 {
@@ -11,7 +12,7 @@ namespace JuegoCaballerosCalabozosDragones
         readonly int color; 
         public int Color { get { return color; } }
 
-        public Caballero(int color): base()
+        public Caballero(int color)
         {
             this.color = color;
         }
@@ -23,11 +24,7 @@ namespace JuegoCaballerosCalabozosDragones
             return dado;
         }
 
-        public bool RevisarCasilla()
-        {
-            //ver en la casilla si hay algo
-            return true;
-        }
+        
 
     }
 }
