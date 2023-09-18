@@ -9,19 +9,24 @@ namespace JuegoCaballerosCalabozosDragones
 {
     internal class Sistema
     {
-        ArrayList ranking=new ArrayList();
+        ArrayList ranking = new ArrayList();
         Partida partidaActual;
         public ArrayList Ranking { get { return ranking; } }
-        public Partida PartidaActual { get {  return partidaActual; } }
+        public Partida PartidaActual { get { return partidaActual; } }
         public void OrdenarRanking()
         {
             ranking.Sort();
             ranking.Reverse();
         }
-        
+
         public void CrearPartida(int cantidadJugadores, int modoJuego)
         {
             partidaActual = new Partida(cantidadJugadores, modoJuego);
+        }
+
+        public void AgregarJugadorRanking(Jugador jugador)
+        {
+            ranking.Add(jugador);
         }
     }
 }

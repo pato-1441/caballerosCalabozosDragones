@@ -14,6 +14,7 @@ namespace JuegoCaballerosCalabozosDragones
         int turno=0;
         bool demo;
         int dificultad;
+        Random dado = new Random();
         Jugador ganador = null;
 
         //CREAMOS JUGADORES VIRTUALES Y HUMANO
@@ -37,7 +38,16 @@ namespace JuegoCaballerosCalabozosDragones
             CrearJugadoresVirtuales(cantJugadores, demo);
         }
 
-        public void Jugar() { 
+
+        public void Jugar() 
+        {
+            //tirar el dado y moverse
+            int movimiento = dado.Next(1, 7);
+            jugadores[turno].MoverPieza(movimiento);
+            //revisar casilla
+            int control=jugadores[turno].RevisarCasilla();
+            switch()
+            //si es necesario, volver a moverse
         
         }
 
@@ -83,7 +93,7 @@ namespace JuegoCaballerosCalabozosDragones
                 for(int i = 0; i < 3; i++)
                 {
                     calabozos[i]=new Pieza();
-                    tablero[calabozos[i].Mover()].AgregarCalabozo();
+                    tablero[calabozos[i].Mover(dado.Next(1,51))].AgregarCalabozo();
                 }
             }
         }

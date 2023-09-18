@@ -9,14 +9,13 @@ namespace JuegoCaballerosCalabozosDragones
     internal class Pieza
     {
         protected int posicion = 1;
-        protected Random movimiento = new Random();
 
         public int Posicion { get { return posicion; } }
 
         
-        public virtual int Mover()
+        public virtual int Mover(int cantidad)
         {
-            posicion = movimiento.Next(1, 51);
+            posicion = cantidad;
             return posicion;
         }
     }

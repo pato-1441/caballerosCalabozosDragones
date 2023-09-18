@@ -17,11 +17,10 @@ namespace JuegoCaballerosCalabozosDragones
             this.color = color;
         }
 
-        public override int Mover()
+        public override int Mover(int cantidad)
         {
-            int dado = base.movimiento.Next(1, 7);
-            base.posicion += dado;
-            return dado;
+            base.posicion += cantidad;
+            return cantidad;
         }
 
         
