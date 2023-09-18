@@ -37,13 +37,12 @@ namespace JuegoCaballerosCalabozosDragones
 
         private void CrearJugadoresVirtuales(int cantidadJugadores, bool demo)
         {
-            int posicion = 1;
             if (demo)
             {
                 for (int i = 0; i < cantidadJugadores; i++)
                 {
                     
-                    string nombreJugador = "Jugador" + i;
+                    string nombreJugador = "Jugador" + (i+1);
                     Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1);
                     jugadores[i] = jugador;
                     
@@ -54,10 +53,9 @@ namespace JuegoCaballerosCalabozosDragones
                 
                 for (int i = 0; i < cantidadJugadores - 1; i++)
                 {
-                    string nombreJugador = "Jugador" + posicion;
+                    string nombreJugador = "Jugador" + (i+1);
                     Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1);
-                    jugadores[posicion] = jugador;
-                    posicion++;
+                    jugadores[i+1] = jugador;
                 }
             }
                
