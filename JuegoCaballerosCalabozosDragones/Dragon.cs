@@ -18,5 +18,10 @@ namespace JuegoCaballerosCalabozosDragones
         {
             this.duenio = duenio;
         }
+
+        public override int Mover(int cantidad)
+        {
+            return base.Mover(cantidad);
+        }
     }
 }

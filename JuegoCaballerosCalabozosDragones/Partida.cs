@@ -42,18 +42,40 @@ namespace JuegoCaballerosCalabozosDragones
 
         public int Jugar() 
         {
-            
-            //tirar el dado y moverse
+
+            //sobre el tablero, en donde tiene el dragon el jugador, quita el dragon de la casilla (le pasa dragon) 
+            Jugador jugadorJugando = ((Jugador)jugadores[turno]);
+            if (!(jugadorJugando.PierdeTurno))
+            {
+                for(int i = 0; i < jugadorJugando.Dragones.Length; i++)
+                {
+                    //quitar dragon de la casilla
+                    tablero[jugadorJugando.Dragones[i].Posicion].QuitarDragon(jugadorJugando.Dragones[i]);
+                    int movimientoDragon = dado.Next(1, 51);
+                    //moverlo
+                    int moverDragon = jugadorJugando.Dragones[i].Mover(movimientoDragon);
+                    //agregar dragon de la casilla
+                    tablero[movimientoDragon].AgregarDragon(jugadorJugando.Dragones[i]);
+                }
+            }
+
+            //tira dado y mueve caballero
             int movimiento = dado.Next(1, 7);
-            int moverPieza = ((Jugador)jugadores[turno]).MoverPieza(movimiento, (tablero[((Jugador)jugadores[turno]).Caballero.Posicion + movimiento]));
+            int moverPieza = (jugadorJugando.MoverPieza(movimiento, tablero[jugadorJugando.Caballero.Posicion + movimiento]));
             if (moverPieza == 2)
             {
+                //elimina los dragones y luego el jugador que MURIO
+                tablero[jugadorJugando.Dragones[0].Posicion].QuitarDragon(jugadorJugando.Dragones[0]);
+                tablero[jugadorJugando.Dragones[1].Posicion].QuitarDragon(jugadorJugando.Dragones[1]);
                 jugadores.RemoveAt(turno);
             }
             if (turno == (jugadores.Count - 1))
             {
                 turno = 0;
-            }else turno++;
+            } else
+            {
+                turno++;
+            }
             //si es necesario, volver a moverse
             return moverPieza;
         }

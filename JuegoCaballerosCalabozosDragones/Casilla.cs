@@ -29,7 +29,8 @@ namespace JuegoCaballerosCalabozosDragones
 
         public void QuitarDragon(Dragon dragon)
         {
-            dragones.RemoveAt(dragon.Posicion);
+            int posicionDragon = dragones.IndexOf(dragon);
+            dragones.RemoveAt(posicionDragon);
         }
 
         public void AgregarCalabozo()

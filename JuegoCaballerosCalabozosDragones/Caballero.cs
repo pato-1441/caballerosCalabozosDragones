@@ -20,12 +20,16 @@ namespace JuegoCaballerosCalabozosDragones
         public override int Mover(int cantidad)
         {
            
-            if(base.posicion + cantidad < 1)
+            if (base.posicion + cantidad < 1)
             {
                 base.posicion = 1;
-            }else if(base.posicion >50) {
-            base.posicion = 50;
-            }else base.posicion += cantidad;
+            } else if (base.posicion >50) {
+                base.posicion = 50;
+            }
+            else
+            {
+                base.posicion += cantidad;
+            }
             return cantidad;
         }
 

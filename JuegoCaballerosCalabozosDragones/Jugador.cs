@@ -11,8 +11,8 @@ namespace JuegoCaballerosCalabozosDragones
         int puntaje;
         string nombre;
         bool humano;
-        int ultimoMovimiento=0;
-        bool pierdeTurno=false;
+        int ultimoMovimiento = 0;
+        bool pierdeTurno = false;
         Dragon [] misDragones = new Dragon[2];
         Caballero caballero;
 
@@ -33,6 +33,9 @@ namespace JuegoCaballerosCalabozosDragones
         {
             get { return Caballero; }
         }
+        public bool PierdeTurno { get { return pierdeTurno; } }
+
+        public Dragon[] Dragones { get { return misDragones; } }  
 
         public Jugador(string nombre, bool humano, int dificultad, int color)
         {
@@ -49,6 +52,15 @@ namespace JuegoCaballerosCalabozosDragones
                 misDragones[0] = new Dragon(this);
                 misDragones[1] = new Dragon(this);
             }
+        }
+
+        public void MoverDragones(Casilla casilla)
+        {
+            Random random = new Random();
+            casilla.QuitarDragon(misDragones[0]);
+            misDragones[0].Mover(random.Next(1, 51));
+            misDragones[1].Mover(random.Next(1, 51));        
+            
         }
 
         public int MoverPieza(int cantidad, Casilla casillaActual)
@@ -77,35 +89,27 @@ namespace JuegoCaballerosCalabozosDragones
 
         private int RevisarCasilla(Casilla casillaActual)
         {
-             /*
-             Si no hay nada devuelve 0;
-             Si hay dragon mio =1;
-             Si hay dragonEnemigo y calabozo =2;
-             Si hay dragon del otro =3;
-             Si hay solo calabozo = 4;
-             */
-
-            int entidades = 0;
+            int entidades = 0; //no hay nada devuelve 0;
             if (casillaActual.Dragones.Count > 0 )
             {
-               if(((Dragon)casillaActual.Dragones[0]).Duenio.Nombre == this.Nombre)
+                if(((Dragon)casillaActual.Dragones[0]).Duenio.Nombre == this.Nombre)
                 {
-                    entidades = 1;
+                    entidades = 1; //hay dragon mio = 1;
                 }
                 else if (((Dragon)casillaActual.Dragones[0]).Duenio.Nombre != this.Nombre && casillaActual.Calabozos)
                 {
-                    entidades = 2;
+                    entidades = 2; //hay dragonEnemigo y calabozo = 2;
                 }
                 else
                 {
-                    entidades=3;
+                    entidades = 3; //hay dragon del otro = 3;
                 }
             }
             else if (casillaActual.Calabozos)
             {
-                entidades =4;
+                entidades = 4; //hay solo calabozo = 4; 
             }
-                return entidades;
+            return entidades;
         }
     }
 }
