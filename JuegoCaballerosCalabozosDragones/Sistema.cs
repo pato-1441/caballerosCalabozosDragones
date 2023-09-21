@@ -19,6 +19,11 @@ namespace JuegoCaballerosCalabozosDragones
             ranking.Reverse();
         }
 
+        public void CrearPartida(int cantidadJugadores, int modoJuego, string nombreJugador, int colorCaballero)
+        {
+            partidaActual = new Partida(cantidadJugadores, modoJuego, nombreJugador, colorCaballero);
+        }
+
         public void CrearPartida(int cantidadJugadores, int modoJuego)
         {
             partidaActual = new Partida(cantidadJugadores, modoJuego);

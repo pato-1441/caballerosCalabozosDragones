@@ -45,10 +45,12 @@
             this.btnJugar.TabIndex = 0;
             this.btnJugar.Text = "Jugar";
             this.btnJugar.UseVisualStyleBackColor = true;
+            this.btnJugar.Click += new System.EventHandler(this.btnJugar_Click);
             // 
             // rbBasico
             // 
             this.rbBasico.AutoSize = true;
+            this.rbBasico.Checked = true;
             this.rbBasico.Location = new System.Drawing.Point(333, 326);
             this.rbBasico.Name = "rbBasico";
             this.rbBasico.Size = new System.Drawing.Size(57, 17);
@@ -64,7 +66,6 @@
             this.rbIntermedio.Name = "rbIntermedio";
             this.rbIntermedio.Size = new System.Drawing.Size(74, 17);
             this.rbIntermedio.TabIndex = 2;
-            this.rbIntermedio.TabStop = true;
             this.rbIntermedio.Text = "Intermedio";
             this.rbIntermedio.UseVisualStyleBackColor = true;
             // 
@@ -75,7 +76,6 @@
             this.rbExperto.Name = "rbExperto";
             this.rbExperto.Size = new System.Drawing.Size(61, 17);
             this.rbExperto.TabIndex = 3;
-            this.rbExperto.TabStop = true;
             this.rbExperto.Text = "Experto";
             this.rbExperto.UseVisualStyleBackColor = true;
             // 
@@ -87,6 +87,7 @@
             this.btnDemo.TabIndex = 4;
             this.btnDemo.Text = "Demo";
             this.btnDemo.UseVisualStyleBackColor = true;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
             // 
             // btnSalir
             // 
@@ -106,6 +107,7 @@
             this.btnRanking.TabIndex = 6;
             this.btnRanking.Text = "Ranking";
             this.btnRanking.UseVisualStyleBackColor = true;
+            this.btnRanking.Click += new System.EventHandler(this.btnRanking_Click);
             // 
             // Form1
             // 
@@ -124,6 +126,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caballeros Dragones y Calabozos";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

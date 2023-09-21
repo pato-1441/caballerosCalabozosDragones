@@ -55,6 +55,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNombreJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNombreJugador.Designer.cs">
+      <DependentUpon>FormNombreJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRanking.Designer.cs">
+      <DependentUpon>FormRanking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Jugador.cs" />
     <Compile Include="Partida.cs" />
     <Compile Include="Pieza.cs" />
@@ -63,6 +75,12 @@
     <Compile Include="Sistema.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNombreJugador.resx">
+      <DependentUpon>FormNombreJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRanking.resx">
+      <DependentUpon>FormRanking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

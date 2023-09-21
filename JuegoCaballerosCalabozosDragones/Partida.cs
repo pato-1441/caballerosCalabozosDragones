@@ -69,7 +69,7 @@ namespace JuegoCaballerosCalabozosDragones
                 tablero[jugadorJugando.Dragones[1].Posicion].QuitarDragon(jugadorJugando.Dragones[1]);
                 jugadores.RemoveAt(turno);
             }
-            if (turno == (jugadores.Count - 1))
+            if (turno >= (jugadores.Count - 1))
             {
                 turno = 0;
             } else
@@ -77,7 +77,7 @@ namespace JuegoCaballerosCalabozosDragones
                 turno++;
             }
             //si es necesario, volver a moverse
-            return moverPieza;
+            return movimiento;
         }
 
 
@@ -111,7 +111,7 @@ namespace JuegoCaballerosCalabozosDragones
         //string nombre, bool humano, int dificultad, int color
         private void CrearJugadorHumano(string nombre, int color)
         {
-            jugadores[0] = new Jugador(nombre, true, dificultad, color);
+            jugadores.Add(new Jugador(nombre, true, dificultad, color));
         }
         
         private void CrearCalabozos()
