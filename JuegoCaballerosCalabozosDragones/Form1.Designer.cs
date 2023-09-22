@@ -101,7 +101,7 @@
             // 
             // btnRanking
             // 
-            this.btnRanking.Location = new System.Drawing.Point(345, 372);
+            this.btnRanking.Location = new System.Drawing.Point(345, 399);
             this.btnRanking.Name = "btnRanking";
             this.btnRanking.Size = new System.Drawing.Size(196, 37);
             this.btnRanking.TabIndex = 6;

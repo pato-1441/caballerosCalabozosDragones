@@ -9,7 +9,7 @@ namespace JuegoCaballerosCalabozosDragones
 {
     internal class Partida
     {
-        Casilla[] tablero = new Casilla[51] ;
+        Casilla[] tablero = new Casilla[51];
         Pieza[] calabozos;
         ArrayList jugadores;
         int turno=0;
@@ -17,13 +17,15 @@ namespace JuegoCaballerosCalabozosDragones
         int dificultad;
         Random dado = new Random();
         Jugador ganador = null;
-
+        
+        public Jugador Ganador { get { return ganador; } }
         //CREAMOS JUGADORES VIRTUALES Y HUMANO
         public Partida(int cantJugadores, int dificultad, string nombreJugador, int colorCaballero)
         {
             jugadores = new ArrayList();
             demo = false;
             this.dificultad = dificultad;
+            CrearCasillas();
             CrearJugadorHumano(nombreJugador, colorCaballero);
             CrearJugadoresVirtuales(cantJugadores, demo);
             CrearCalabozos();
@@ -36,10 +38,17 @@ namespace JuegoCaballerosCalabozosDragones
             jugadores = new ArrayList();
             demo = true;
             this.dificultad = dificultad;
+            CrearCasillas();
             CrearJugadoresVirtuales(cantJugadores, demo);
         }
 
-
+        private void CrearCasillas()
+        {
+            for(int i = 1; i<51; i++)
+            {
+                tablero[i] = new Casilla();
+            }
+        }
         public int Jugar() 
         {
 
@@ -122,7 +131,7 @@ namespace JuegoCaballerosCalabozosDragones
                 for(int i = 0; i < 3; i++)
                 {
                     calabozos[i]=new Pieza();
-                    tablero[calabozos[i].Mover(dado.Next(1,51))].AgregarCalabozo();
+                    tablero[calabozos[i].Mover(dado.Next(1, 51))].AgregarCalabozo();
                 }
             }
         }

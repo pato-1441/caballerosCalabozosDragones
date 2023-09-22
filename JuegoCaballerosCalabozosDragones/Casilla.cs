@@ -9,7 +9,7 @@ namespace JuegoCaballerosCalabozosDragones
     internal class Casilla
     {
         ArrayList dragones = new ArrayList();
-        bool calabozos;
+        bool calabozos = false;
         //bool caballero;
         public ArrayList Dragones
         {

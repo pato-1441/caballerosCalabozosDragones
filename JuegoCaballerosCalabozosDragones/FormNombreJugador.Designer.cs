@@ -36,12 +36,15 @@
             this.rbAzul = new System.Windows.Forms.RadioButton();
             this.rbAmarillo = new System.Windows.Forms.RadioButton();
             this.rbVerde = new System.Windows.Forms.RadioButton();
+            this.nudCantJugadores = new System.Windows.Forms.NumericUpDown();
+            this.lCantJugadores = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantJugadores)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(15, 123);
+            this.button1.Location = new System.Drawing.Point(12, 182);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 43);
             this.button1.TabIndex = 0;
@@ -67,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 56);
+            this.label2.Location = new System.Drawing.Point(12, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 3;
@@ -76,7 +79,8 @@
             // rbRojo
             // 
             this.rbRojo.AutoSize = true;
-            this.rbRojo.Location = new System.Drawing.Point(15, 72);
+            this.rbRojo.Checked = true;
+            this.rbRojo.Location = new System.Drawing.Point(15, 124);
             this.rbRojo.Name = "rbRojo";
             this.rbRojo.Size = new System.Drawing.Size(47, 17);
             this.rbRojo.TabIndex = 4;
@@ -87,41 +91,71 @@
             // rbAzul
             // 
             this.rbAzul.AutoSize = true;
-            this.rbAzul.Location = new System.Drawing.Point(15, 95);
+            this.rbAzul.Location = new System.Drawing.Point(15, 147);
             this.rbAzul.Name = "rbAzul";
             this.rbAzul.Size = new System.Drawing.Size(45, 17);
             this.rbAzul.TabIndex = 5;
-            this.rbAzul.TabStop = true;
             this.rbAzul.Text = "Azul";
             this.rbAzul.UseVisualStyleBackColor = true;
             // 
             // rbAmarillo
             // 
             this.rbAmarillo.AutoSize = true;
-            this.rbAmarillo.Location = new System.Drawing.Point(95, 72);
+            this.rbAmarillo.Location = new System.Drawing.Point(95, 124);
             this.rbAmarillo.Name = "rbAmarillo";
             this.rbAmarillo.Size = new System.Drawing.Size(61, 17);
             this.rbAmarillo.TabIndex = 6;
-            this.rbAmarillo.TabStop = true;
             this.rbAmarillo.Text = "Amarillo";
             this.rbAmarillo.UseVisualStyleBackColor = true;
             // 
             // rbVerde
             // 
             this.rbVerde.AutoSize = true;
-            this.rbVerde.Location = new System.Drawing.Point(95, 95);
+            this.rbVerde.Location = new System.Drawing.Point(95, 147);
             this.rbVerde.Name = "rbVerde";
             this.rbVerde.Size = new System.Drawing.Size(53, 17);
             this.rbVerde.TabIndex = 7;
-            this.rbVerde.TabStop = true;
             this.rbVerde.Text = "Verde";
             this.rbVerde.UseVisualStyleBackColor = true;
+            // 
+            // nudCantJugadores
+            // 
+            this.nudCantJugadores.Location = new System.Drawing.Point(15, 72);
+            this.nudCantJugadores.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.nudCantJugadores.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudCantJugadores.Name = "nudCantJugadores";
+            this.nudCantJugadores.Size = new System.Drawing.Size(120, 20);
+            this.nudCantJugadores.TabIndex = 8;
+            this.nudCantJugadores.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // lCantJugadores
+            // 
+            this.lCantJugadores.AutoSize = true;
+            this.lCantJugadores.Location = new System.Drawing.Point(12, 56);
+            this.lCantJugadores.Name = "lCantJugadores";
+            this.lCantJugadores.Size = new System.Drawing.Size(113, 13);
+            this.lCantJugadores.TabIndex = 9;
+            this.lCantJugadores.Text = "Cantidad de jugadores";
             // 
             // FormNombreJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(195, 178);
+            this.ClientSize = new System.Drawing.Size(195, 238);
+            this.Controls.Add(this.lCantJugadores);
+            this.Controls.Add(this.nudCantJugadores);
             this.Controls.Add(this.rbVerde);
             this.Controls.Add(this.rbAmarillo);
             this.Controls.Add(this.rbAzul);
@@ -133,6 +167,7 @@
             this.Name = "FormNombreJugador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNombreJugador";
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantJugadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +183,7 @@
         public System.Windows.Forms.RadioButton rbAzul;
         public System.Windows.Forms.RadioButton rbAmarillo;
         public System.Windows.Forms.RadioButton rbVerde;
+        private System.Windows.Forms.Label lCantJugadores;
+        public System.Windows.Forms.NumericUpDown nudCantJugadores;
     }
 }
