@@ -73,9 +73,9 @@ namespace JuegoCaballerosCalabozosDragones
                 switch (resultado)
                 {
                     case 0: break;
-                    case 1: caballero.Mover(5); break; //adelanta 5 posiciones
+                    case 1: ultimoMovimiento = caballero.Mover(5); break; //adelanta 5 posiciones
                     case 2: break;//muere
-                    case 3: caballero.Mover(-5); break; //retrocede 5 posiciones
+                    case 3: ultimoMovimiento = caballero.Mover(-5); break; //retrocede 5 posiciones
                     case 4: pierdeTurno = true; break;//pierde turno
                 }
             }
