@@ -34,7 +34,8 @@ namespace JuegoCaballerosCalabozosDragones
             
             FormTablero formTablero = new FormTablero();
             FormNombreJugador modal = new FormNombreJugador();
-            if (modal.ShowDialog() == DialogResult.OK)
+            bool jugo = false;
+            while (!jugo && modal.ShowDialog() == DialogResult.OK)
             {
                 int dificultad = 0;
                 int color = 0;
@@ -53,13 +54,15 @@ namespace JuegoCaballerosCalabozosDragones
                     color = 3;
                 else if (modal.rbVerde.Checked)
                     color = 4;
-
-                sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
-                                    dificultad, modal.tbNombre.Text, color);
-                
+                if (modal.tbNombre.Text != "")
+                {
+                    jugo = true;
+                    sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
+                                        dificultad, modal.tbNombre.Text, color);
+                    
                     while (sistema.PartidaActual.Ganador == null)
                     {
-                        formTablero.Show();                        
+                        formTablero.Show();
                         Jugador jugadorActual = ((Jugador)sistema.PartidaActual.Jugadores[sistema.PartidaActual.Turno]);
                         int movimientoJugador;
                         int[] movimientoDragones = new int[2];
@@ -86,15 +89,17 @@ namespace JuegoCaballerosCalabozosDragones
                             case 5:
                                 formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
                                 break;
-                                                       
+
                         }
-                    if (hayGanador)
-                    {
-                        formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " ganó.");
-                        sistema.AgregarJugadorRanking();
-                        MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
+                        if (hayGanador)
+                        {
+                            formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " ganó.");
+                            sistema.AgregarJugadorRanking();
+                            MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
+                        }
                     }
-                }               
+                }
+                else MessageBox.Show("Debe ingresar un nombre.");               
             }
         }
 

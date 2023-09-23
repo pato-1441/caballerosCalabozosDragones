@@ -67,6 +67,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroAzul;
             this.pictureBox5.Location = new System.Drawing.Point(367, 87);
             this.pictureBox5.Name = "pictureBox5";
@@ -77,6 +78,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroRojo;
             this.pictureBox4.Location = new System.Drawing.Point(344, 87);
             this.pictureBox4.Name = "pictureBox4";
@@ -87,6 +89,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroAmarillo;
             this.pictureBox3.Location = new System.Drawing.Point(389, 87);
             this.pictureBox3.Name = "pictureBox3";
@@ -97,6 +100,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroVerde;
             this.pictureBox2.Location = new System.Drawing.Point(330, 87);
             this.pictureBox2.Name = "pictureBox2";
