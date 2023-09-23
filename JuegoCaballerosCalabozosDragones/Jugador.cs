@@ -31,7 +31,7 @@ namespace JuegoCaballerosCalabozosDragones
 
         public Caballero Caballero
         {
-            get { return Caballero; }
+            get { return caballero; }
         }
         public bool PierdeTurno { get { return pierdeTurno; } }
 

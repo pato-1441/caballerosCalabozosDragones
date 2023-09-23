@@ -33,9 +33,64 @@ namespace JuegoCaballerosCalabozosDragones
         {
             
             FormTablero formTablero = new FormTablero();
-            if (formTablero.ShowDialog() == DialogResult.OK)
+            FormNombreJugador modal = new FormNombreJugador();
+            if (modal.ShowDialog() == DialogResult.OK)
             {
-               
+                int dificultad = 0;
+                int color = 0;
+                if (rbBasico.Checked)
+                    dificultad = 0;
+                else if (rbIntermedio.Checked)
+                    dificultad = 1;
+                else if (rbExperto.Checked)
+                    dificultad = 2;
+
+                if (modal.rbRojo.Checked)
+                    color = 1;
+                else if (modal.rbAzul.Checked)
+                    color = 2;
+                else if (modal.rbAmarillo.Checked)
+                    color = 3;
+                else if (modal.rbVerde.Checked)
+                    color = 4;
+
+                sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
+                                    dificultad, modal.tbNombre.Text, color);
+                
+                    while (sistema.PartidaActual.Ganador == null)
+                    {
+                        formTablero.Show();                        
+                        Jugador jugadorActual = ((Jugador)sistema.PartidaActual.Jugadores[sistema.PartidaActual.Turno]);
+                        int movimientoJugador;
+                        int[] movimientoDragones = new int[2];
+                        bool hayGanador = false;
+
+                        int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones);
+                        switch (resultado)
+                        {
+                            case 0:
+                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
+                                break;
+                            case 1:
+                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
+                                break;
+                            case 2:
+                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
+                                break;
+                            case 3:
+                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
+                                break;
+                            case 4:
+                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
+                                break;
+                            case 5:
+                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
+                                break;
+                                                       
+                        }
+                    }
+                
+
             }
         }
 

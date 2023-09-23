@@ -18,6 +18,8 @@ namespace JuegoCaballerosCalabozosDragones
         Random dado = new Random();
         Jugador ganador = null;
         
+        public int Turno { get { return turno; } }
+        public ArrayList Jugadores { get { return jugadores; } }
         public Jugador Ganador { get { return ganador; } }
         //CREAMOS JUGADORES VIRTUALES Y HUMANO
         public Partida(int cantJugadores, int dificultad, string nombreJugador, int colorCaballero)
@@ -60,6 +62,7 @@ namespace JuegoCaballerosCalabozosDragones
                 {
                     //quitar dragon de la casilla
                     tablero[jugadorJugando.Dragones[i].Posicion].QuitarDragon(jugadorJugando.Dragones[i]);
+                    
                     int movimientoDragon = dado.Next(1, 51);
                     //moverlo
                     moverDragon[i] = jugadorJugando.Dragones[i].Mover(movimientoDragon);    //Hice que mover dragon sea un vector
