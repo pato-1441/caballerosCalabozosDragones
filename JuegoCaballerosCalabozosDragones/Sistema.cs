@@ -29,9 +29,9 @@ namespace JuegoCaballerosCalabozosDragones
             partidaActual = new Partida(cantidadJugadores, modoJuego);
         }
 
-        public void AgregarJugadorRanking(Jugador jugador)
+        public void AgregarJugadorRanking()   //Le saqué el argumento y le puse el ganador de la partida actual
         {
-            ranking.Add(jugador);
+            ranking.Add(partidaActual.Ganador);
         }
     }
 }

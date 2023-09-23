@@ -49,23 +49,24 @@ namespace JuegoCaballerosCalabozosDragones
                 tablero[i] = new Casilla();
             }
         }
-        public int Jugar() 
+        public int Jugar(out int movimientoCaballero, ref bool hayGanador, ref int[] moverDragon) //Agregué argumentos
         {
-
+            movimientoCaballero = 0;
             //sobre el tablero, en donde tiene el dragon el jugador, quita el dragon de la casilla (le pasa dragon) 
             Jugador jugadorJugando = ((Jugador)jugadores[turno]);
             if (!(jugadorJugando.PierdeTurno))
             {
-                for(int i = 0; i < jugadorJugando.Dragones.Length; i++)
+                for (int i = 0; i < jugadorJugando.Dragones.Length; i++)
                 {
                     //quitar dragon de la casilla
                     tablero[jugadorJugando.Dragones[i].Posicion].QuitarDragon(jugadorJugando.Dragones[i]);
                     int movimientoDragon = dado.Next(1, 51);
                     //moverlo
-                    int moverDragon = jugadorJugando.Dragones[i].Mover(movimientoDragon);
+                    moverDragon[i] = jugadorJugando.Dragones[i].Mover(movimientoDragon);    //Hice que mover dragon sea un vector
                     //agregar dragon de la casilla
                     tablero[movimientoDragon].AgregarDragon(jugadorJugando.Dragones[i]);
                 }
+
             }
 
             //tira dado y mueve caballero
@@ -80,13 +81,24 @@ namespace JuegoCaballerosCalabozosDragones
             }
             if (turno >= (jugadores.Count - 1))
             {
+                movimientoCaballero = jugadorJugando.Caballero.Posicion; //Agregué esta linea de código
                 turno = 0;
-            } else
-            {
-                turno++;
             }
+            else
+            {
+                movimientoCaballero = jugadorJugando.Caballero.Posicion; //Agregué esta linea de código
+                turno++;
+
+            }
+
+            if (jugadorJugando.Caballero.Posicion >= 50)
+            {
+                ganador = jugadorJugando;
+                hayGanador = true;
+            }//Agregué esta linea de código
+
             //si es necesario, volver a moverse
-            return movimiento;
+            return moverPieza;//Cambié movimiento por moverPieza
         }
 
 
@@ -136,7 +148,7 @@ namespace JuegoCaballerosCalabozosDragones
             }
         }
 
-        private bool VerificarGanador()
+        /*private bool VerificarGanador()
         {
             bool hayGanador=false;
             if(ganador != null)
@@ -144,7 +156,7 @@ namespace JuegoCaballerosCalabozosDragones
                 hayGanador = true;
             }
             return hayGanador;  
-        }
+        }*/
 
     }
 

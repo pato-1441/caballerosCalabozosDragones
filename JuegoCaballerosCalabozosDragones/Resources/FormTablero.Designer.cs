@@ -36,6 +36,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbEstado = new System.Windows.Forms.ListBox();
+            this.btnTermino = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -45,9 +47,9 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(12, 481);
+            this.btnSalir.Location = new System.Drawing.Point(12, 531);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(230, 72);
+            this.btnSalir.Size = new System.Drawing.Size(112, 72);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -55,12 +57,13 @@
             // 
             // btnTirarDado
             // 
-            this.btnTirarDado.Location = new System.Drawing.Point(12, 179);
+            this.btnTirarDado.Location = new System.Drawing.Point(12, 400);
             this.btnTirarDado.Name = "btnTirarDado";
-            this.btnTirarDado.Size = new System.Drawing.Size(230, 117);
+            this.btnTirarDado.Size = new System.Drawing.Size(230, 108);
             this.btnTirarDado.TabIndex = 1;
-            this.btnTirarDado.Text = "Tirar Dados";
+            this.btnTirarDado.Text = "Tirar Dado";
             this.btnTirarDado.UseVisualStyleBackColor = true;
+            this.btnTirarDado.Click += new System.EventHandler(this.btnTirarDado_Click);
             // 
             // pictureBox5
             // 
@@ -114,12 +117,33 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // lbEstado
+            // 
+            this.lbEstado.FormattingEnabled = true;
+            this.lbEstado.Location = new System.Drawing.Point(12, 13);
+            this.lbEstado.Name = "lbEstado";
+            this.lbEstado.Size = new System.Drawing.Size(230, 381);
+            this.lbEstado.TabIndex = 7;
+            // 
+            // btnTermino
+            // 
+            this.btnTermino.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnTermino.Enabled = false;
+            this.btnTermino.Location = new System.Drawing.Point(130, 531);
+            this.btnTermino.Name = "btnTermino";
+            this.btnTermino.Size = new System.Drawing.Size(112, 72);
+            this.btnTermino.TabIndex = 8;
+            this.btnTermino.Text = "Listo";
+            this.btnTermino.UseVisualStyleBackColor = true;
+            // 
             // FormTablero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 615);
             this.ControlBox = false;
+            this.Controls.Add(this.btnTermino);
+            this.Controls.Add(this.lbEstado);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -131,6 +155,7 @@
             this.Name = "FormTablero";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Tablero";
+            this.Load += new System.EventHandler(this.FormTablero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -141,13 +166,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnTirarDado;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.Button btnTirarDado;
+        public System.Windows.Forms.Button btnTermino;
+        public System.Windows.Forms.Button btnSalir;
+        public System.Windows.Forms.ListBox lbEstado;
     }
 }

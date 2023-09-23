@@ -22,3 +22,17 @@ E:\Facultad\laboratorioII\caballerosCalabozosDragones\JuegoCaballerosCalabozosDr
 E:\Facultad\laboratorioII\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.FormRanking.resources
 E:\Facultad\laboratorioII\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.FormNombreJugador.resources
 E:\Facultad\laboratorioII\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.Resources.FormTablero.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\bin\Debug\JuegoCaballerosCalabozosDragones.exe.config
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\bin\Debug\JuegoCaballerosCalabozosDragones.exe
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\bin\Debug\JuegoCaballerosCalabozosDragones.pdb
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.csproj.AssemblyReference.cache
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.csproj.SuggestedBindingRedirects.cache
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.Form1.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.FormNombreJugador.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.FormRanking.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.Properties.Resources.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.Resources.FormTablero.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.csproj.GenerateResource.cache
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.csproj.CoreCompileInputs.cache
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.exe
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.pdb

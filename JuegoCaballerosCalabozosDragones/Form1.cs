@@ -31,38 +31,11 @@ namespace JuegoCaballerosCalabozosDragones
 
         private void btnJugar_Click(object sender, EventArgs e)
         {
-            FormNombreJugador modal = new FormNombreJugador();
+            
             FormTablero formTablero = new FormTablero();
-            if(modal.ShowDialog() == DialogResult.OK)
+            if (formTablero.ShowDialog() == DialogResult.OK)
             {
-                int dificultad = 0;
-                int color = 0;
-                if (rbBasico.Checked)
-                    dificultad = 0;
-                else if (rbIntermedio.Checked)
-                    dificultad = 1;
-                else if (rbExperto.Checked)
-                    dificultad = 2;
-
-                if (modal.rbRojo.Checked)
-                    color = 1;
-                else if (modal.rbAzul.Checked)
-                    color = 2;
-                else if (modal.rbAmarillo.Checked)
-                    color = 3;
-                else if (modal.rbVerde.Checked)
-                    color = 4;
-
-                sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
-                                    dificultad, modal.tbNombre.Text, color);
-                if(formTablero.ShowDialog() == DialogResult.OK)
-                {
-                    while(sistema.PartidaActual.Ganador == null)
-                    {
-
-                    }
-                    MessageBox.Show("sexo");
-                }
+               
             }
         }
 
