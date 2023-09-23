@@ -74,7 +74,20 @@ namespace JuegoCaballerosCalabozosDragones
 
             //tira dado y mueve caballero
             int movimiento = dado.Next(1, 7);
-            int moverPieza = (jugadorJugando.MoverPieza(movimiento, tablero[jugadorJugando.Caballero.Posicion + movimiento]));
+            Casilla casilla;
+            if (jugadorJugando.Caballero.Posicion + movimiento < 1)
+            {
+                casilla = tablero[1];
+            }
+            else if (jugadorJugando.Caballero.Posicion + movimiento > 50)
+            {
+                casilla = tablero[50];
+            }
+            else
+            {
+                casilla = tablero[jugadorJugando.Caballero.Posicion + movimiento];
+            }
+            int moverPieza = (jugadorJugando.MoverPieza(movimiento, casilla));
             if (moverPieza == 2)
             {
                 //elimina los dragones y luego el jugador que MURIO
@@ -113,7 +126,7 @@ namespace JuegoCaballerosCalabozosDragones
                 {
                     
                     string nombreJugador = "Virtual " + (i+1);
-                    Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1);
+                    Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1, tablero[1]);
                     jugadores.Add(jugador);
                     
                 }
@@ -124,7 +137,7 @@ namespace JuegoCaballerosCalabozosDragones
                 for (int i = 0; i < cantidadJugadores - 1; i++)
                 {
                     string nombreJugador = "Virtual " + (i+1);
-                    Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1);
+                    Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1, tablero[1]);
                     jugadores.Add(jugador);
                 }
             }
@@ -135,7 +148,7 @@ namespace JuegoCaballerosCalabozosDragones
         //string nombre, bool humano, int dificultad, int color
         private void CrearJugadorHumano(string nombre, int color)
         {
-            jugadores.Add(new Jugador(nombre, true, dificultad, color));
+            jugadores.Add(new Jugador(nombre, true, dificultad, color, tablero[1]));
         }
         
         private void CrearCalabozos()

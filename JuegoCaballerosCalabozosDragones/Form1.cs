@@ -88,6 +88,11 @@ namespace JuegoCaballerosCalabozosDragones
                                 break;
                                                        
                         }
+                    if (hayGanador)
+                    {
+                        formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " ganó.");
+                        MessageBox.Show("¡Felicidades, jugador " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + " ganaste!");
+                    }
                     }
                 
 

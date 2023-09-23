@@ -17,6 +17,7 @@ namespace JuegoCaballerosCalabozosDragones
         public Dragon(Jugador duenio)
         {
             this.duenio = duenio;
+            base.posicion = 1;
         }
 
         public override int Mover(int cantidad)

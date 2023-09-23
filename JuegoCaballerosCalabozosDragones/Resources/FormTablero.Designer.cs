@@ -49,7 +49,7 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(12, 531);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 72);
+            this.btnSalir.Size = new System.Drawing.Size(155, 72);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             // 
             this.btnTirarDado.Location = new System.Drawing.Point(12, 400);
             this.btnTirarDado.Name = "btnTirarDado";
-            this.btnTirarDado.Size = new System.Drawing.Size(230, 108);
+            this.btnTirarDado.Size = new System.Drawing.Size(309, 125);
             this.btnTirarDado.TabIndex = 1;
             this.btnTirarDado.Text = "Tirar Dado";
             this.btnTirarDado.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroAzul;
-            this.pictureBox5.Location = new System.Drawing.Point(290, 86);
+            this.pictureBox5.Location = new System.Drawing.Point(367, 87);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(39, 38);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,7 +78,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroRojo;
-            this.pictureBox4.Location = new System.Drawing.Point(267, 86);
+            this.pictureBox4.Location = new System.Drawing.Point(344, 87);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(39, 38);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroAmarillo;
-            this.pictureBox3.Location = new System.Drawing.Point(312, 86);
+            this.pictureBox3.Location = new System.Drawing.Point(389, 87);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(39, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -98,7 +98,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroVerde;
-            this.pictureBox2.Location = new System.Drawing.Point(253, 86);
+            this.pictureBox2.Location = new System.Drawing.Point(330, 87);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@
             this.pictureBox1.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.Tablero;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(248, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(327, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1029, 590);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,16 +122,16 @@
             this.lbEstado.FormattingEnabled = true;
             this.lbEstado.Location = new System.Drawing.Point(12, 13);
             this.lbEstado.Name = "lbEstado";
-            this.lbEstado.Size = new System.Drawing.Size(230, 381);
+            this.lbEstado.Size = new System.Drawing.Size(309, 381);
             this.lbEstado.TabIndex = 7;
             // 
             // btnTermino
             // 
             this.btnTermino.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnTermino.Enabled = false;
-            this.btnTermino.Location = new System.Drawing.Point(130, 531);
+            this.btnTermino.Location = new System.Drawing.Point(173, 531);
             this.btnTermino.Name = "btnTermino";
-            this.btnTermino.Size = new System.Drawing.Size(112, 72);
+            this.btnTermino.Size = new System.Drawing.Size(148, 72);
             this.btnTermino.TabIndex = 8;
             this.btnTermino.Text = "Listo";
             this.btnTermino.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 615);
+            this.ClientSize = new System.Drawing.Size(1368, 615);
             this.ControlBox = false;
             this.Controls.Add(this.btnTermino);
             this.Controls.Add(this.lbEstado);

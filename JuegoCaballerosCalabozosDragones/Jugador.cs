@@ -37,20 +37,22 @@ namespace JuegoCaballerosCalabozosDragones
 
         public Dragon[] Dragones { get { return misDragones; } }  
 
-        public Jugador(string nombre, bool humano, int dificultad, int color)
+        public Jugador(string nombre, bool humano, int dificultad, int color, Casilla casillaUno)
         {
             this.nombre = nombre;
             this.humano = humano;
-            CrearDragones(dificultad);
+            CrearDragones(dificultad, casillaUno);
             caballero = new Caballero(color);
         }
 
-        private void CrearDragones(int dificultad)
+        private void CrearDragones(int dificultad, Casilla casillaUno)
         {
             if(dificultad >= 1)
             {
-                misDragones[0] = new Dragon(this);
+                misDragones[0] = new Dragon(this);                
                 misDragones[1] = new Dragon(this);
+                casillaUno.AgregarDragon(misDragones[0]);
+                casillaUno.AgregarDragon(misDragones[1]);
             }
         }
 
