@@ -91,6 +91,7 @@ namespace JuegoCaballerosCalabozosDragones
                     if (hayGanador)
                     {
                         formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " ganó.");
+                        sistema.Ranking.Add(jugadorActual);
                         MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
                     }
                 }               
@@ -165,7 +166,7 @@ namespace JuegoCaballerosCalabozosDragones
             sistema.OrdenarRanking();
             foreach(Jugador jugador in sistema.Ranking)
             {
-                modal.lbRanking.Items.Add(jugador);
+                modal.lbRanking.Items.Add(jugador.Nombre+" // Puntos: "+jugador.Puntaje);
             }
             modal.Show();
         }
