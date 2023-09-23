@@ -51,7 +51,7 @@ namespace JuegoCaballerosCalabozosDragones
                 tablero[i] = new Casilla();
             }
         }
-        public int Jugar(out int movimientoCaballero, ref bool hayGanador, ref int[] moverDragon) //Agregué argumentos
+        public int Jugar(out int movimientoCaballero, ref bool hayGanador, ref int[] moverDragon, int dadoJugador) //Agregué argumentos
         {
             movimientoCaballero = 0;
             //sobre el tablero, en donde tiene el dragon el jugador, quita el dragon de la casilla (le pasa dragon) 
@@ -74,7 +74,7 @@ namespace JuegoCaballerosCalabozosDragones
             }
 
             //tira dado y mueve caballero
-            int movimiento = dado.Next(1, 7);
+            int movimiento = dadoJugador;//.Next(1, 7);
             Casilla casilla;
             if (jugadorJugando.Caballero.Posicion + movimiento < 1)
             {

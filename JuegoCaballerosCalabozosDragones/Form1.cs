@@ -31,7 +31,8 @@ namespace JuegoCaballerosCalabozosDragones
 
         private void btnJugar_Click(object sender, EventArgs e)
         {
-            
+            Random dado = new Random();
+            TirarDados tirarDados = new TirarDados();
             FormTablero formTablero = new FormTablero();
             FormNombreJugador modal = new FormNombreJugador();
             bool jugo = false;
@@ -68,35 +69,42 @@ namespace JuegoCaballerosCalabozosDragones
                         int[] movimientoDragones = new int[2];
                         bool hayGanador = false;
 
-                        int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones);
-                        switch (resultado)
-                        {
-                            case 0:
-                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
-                                break;
-                            case 1:
-                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
-                                break;
-                            case 2:
-                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
-                                break;
-                            case 3:
-                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
-                                break;
-                            case 4:
-                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
-                                break;
-                            case 5:
-                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
-                                break;
 
-                        }
-                        if (hayGanador)
+                        if (tirarDados.ShowDialog() == DialogResult.OK)
                         {
-                            formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " ganó.");
-                            sistema.AgregarJugadorRanking();
-                            MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
+                            
+                            
+                            int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones, dado.Next(1,7));
+                            switch (resultado)
+                            {
+                                case 0:
+                                    formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
+                                    break;
+                                case 1:
+                                    formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
+                                    break;
+                                case 2:
+                                    formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
+                                    break;
+                                case 3:
+                                    formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
+                                    break;
+                                case 4:
+                                    formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
+                                    break;
+                                case 5:
+                                    formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
+                                    break;
+
+                            }
+                            if (hayGanador)
+                            {
+                                formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " ganó.");
+                                sistema.AgregarJugadorRanking();
+                                MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
+                            }
                         }
+                        
                     }
                 }
                 else MessageBox.Show("Debe ingresar un nombre.");               
@@ -105,6 +113,7 @@ namespace JuegoCaballerosCalabozosDragones
 
         private void btnDemo_Click(object sender, EventArgs e)
         {
+            Random dado = new Random();
             FormTablero formTablero = new FormTablero();
             FormNombreJugador modal = new FormNombreJugador();
             modal.tbNombre.Enabled = false;
@@ -133,7 +142,7 @@ namespace JuegoCaballerosCalabozosDragones
                     int[] movimientoDragones = new int[2];
                     bool hayGanador = false;
 
-                    int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones);
+                    int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones, dado.Next(1,7));
                     switch (resultado)
                     {
                         case 0:

@@ -84,6 +84,12 @@
       <DependentUpon>FormTablero.cs</DependentUpon>
     </Compile>
     <Compile Include="Sistema.cs" />
+    <Compile Include="TirarDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TirarDados.Designer.cs">
+      <DependentUpon>TirarDados.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\FormTablero.resx">
       <DependentUpon>FormTablero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TirarDados.resx">
+      <DependentUpon>TirarDados.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
