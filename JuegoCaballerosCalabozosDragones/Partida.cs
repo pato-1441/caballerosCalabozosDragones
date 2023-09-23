@@ -58,17 +58,18 @@ namespace JuegoCaballerosCalabozosDragones
             Jugador jugadorJugando = ((Jugador)jugadores[turno]);
             if (!(jugadorJugando.PierdeTurno))
             {
-                for (int i = 0; i < jugadorJugando.Dragones.Length; i++)
-                {
-                    //quitar dragon de la casilla
-                    tablero[jugadorJugando.Dragones[i].Posicion].QuitarDragon(jugadorJugando.Dragones[i]);
+                if(jugadorJugando.Dragones.Length < 1)
+                    for (int i = 0; i < jugadorJugando.Dragones.Length; i++)
+                    {
+                        //quitar dragon de la casilla
+                        tablero[jugadorJugando.Dragones[i].Posicion].QuitarDragon(jugadorJugando.Dragones[i]);
                     
-                    int movimientoDragon = dado.Next(1, 51);
-                    //moverlo
-                    moverDragon[i] = jugadorJugando.Dragones[i].Mover(movimientoDragon);    //Hice que mover dragon sea un vector
-                    //agregar dragon de la casilla
-                    tablero[movimientoDragon].AgregarDragon(jugadorJugando.Dragones[i]);
-                }
+                        int movimientoDragon = dado.Next(1, 51);
+                        //moverlo
+                        moverDragon[i] = jugadorJugando.Dragones[i].Mover(movimientoDragon);    //Hice que mover dragon sea un vector
+                        //agregar dragon de la casilla
+                        tablero[movimientoDragon].AgregarDragon(jugadorJugando.Dragones[i]);
+                    }
 
             }
 
