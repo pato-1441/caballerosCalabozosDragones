@@ -29,41 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTablero));
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnTirarDado = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbEstado = new System.Windows.Forms.ListBox();
-            this.btnTermino = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(12, 531);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(155, 72);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnTirarDado
-            // 
-            this.btnTirarDado.Location = new System.Drawing.Point(12, 400);
-            this.btnTirarDado.Name = "btnTirarDado";
-            this.btnTirarDado.Size = new System.Drawing.Size(309, 125);
-            this.btnTirarDado.TabIndex = 1;
-            this.btnTirarDado.Text = "Tirar Dado";
-            this.btnTirarDado.UseVisualStyleBackColor = true;
-            this.btnTirarDado.Click += new System.EventHandler(this.btnTirarDado_Click);
             // 
             // pictureBox5
             // 
@@ -126,19 +103,8 @@
             this.lbEstado.FormattingEnabled = true;
             this.lbEstado.Location = new System.Drawing.Point(12, 13);
             this.lbEstado.Name = "lbEstado";
-            this.lbEstado.Size = new System.Drawing.Size(309, 381);
+            this.lbEstado.Size = new System.Drawing.Size(309, 589);
             this.lbEstado.TabIndex = 7;
-            // 
-            // btnTermino
-            // 
-            this.btnTermino.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnTermino.Enabled = false;
-            this.btnTermino.Location = new System.Drawing.Point(173, 531);
-            this.btnTermino.Name = "btnTermino";
-            this.btnTermino.Size = new System.Drawing.Size(148, 72);
-            this.btnTermino.TabIndex = 8;
-            this.btnTermino.Text = "Listo";
-            this.btnTermino.UseVisualStyleBackColor = true;
             // 
             // FormTablero
             // 
@@ -146,18 +112,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1368, 615);
             this.ControlBox = false;
-            this.Controls.Add(this.btnTermino);
             this.Controls.Add(this.lbEstado);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnTirarDado);
-            this.Controls.Add(this.btnSalir);
             this.MaximizeBox = false;
             this.Name = "FormTablero";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tablero";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -174,9 +138,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        public System.Windows.Forms.Button btnTirarDado;
-        public System.Windows.Forms.Button btnTermino;
-        public System.Windows.Forms.Button btnSalir;
         public System.Windows.Forms.ListBox lbEstado;
     }
 }

@@ -29,30 +29,50 @@
         private void InitializeComponent()
         {
             this.btnTirarDados = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTirarDados
             // 
+            this.btnTirarDados.BackColor = System.Drawing.Color.Transparent;
+            this.btnTirarDados.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.dados;
+            this.btnTirarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTirarDados.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnTirarDados.Location = new System.Drawing.Point(-4, -1);
+            this.btnTirarDados.Location = new System.Drawing.Point(11, 11);
+            this.btnTirarDados.Margin = new System.Windows.Forms.Padding(2);
             this.btnTirarDados.Name = "btnTirarDados";
-            this.btnTirarDados.Size = new System.Drawing.Size(199, 131);
+            this.btnTirarDados.Size = new System.Drawing.Size(259, 99);
             this.btnTirarDados.TabIndex = 0;
-            this.btnTirarDados.Text = "TIRAR DADOS";
-            this.btnTirarDados.UseVisualStyleBackColor = true;
+            this.btnTirarDados.UseVisualStyleBackColor = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSalir.Location = new System.Drawing.Point(12, 130);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(257, 53);
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // TirarDados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(188, 125);
+            this.ClientSize = new System.Drawing.Size(281, 195);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnTirarDados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Location = new System.Drawing.Point(464, 360);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TirarDados";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "TirarDados";
             this.ResumeLayout(false);
 
@@ -61,5 +81,6 @@
         #endregion
 
         public System.Windows.Forms.Button btnTirarDados;
+        public System.Windows.Forms.Button btnSalir;
     }
 }

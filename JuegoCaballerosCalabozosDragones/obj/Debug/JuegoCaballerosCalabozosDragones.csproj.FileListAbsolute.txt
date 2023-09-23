@@ -55,3 +55,4 @@ C:\Users\julie\OneDrive\Documentos\Laboratorio II\caballerosCalabozosDragones\Ju
 C:\Users\julie\OneDrive\Documentos\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\bin\Debug\JuegoCaballerosCalabozosDragones.exe.config
 C:\Users\julie\OneDrive\Documentos\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\bin\Debug\JuegoCaballerosCalabozosDragones.exe
 C:\Users\julie\OneDrive\Documentos\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\bin\Debug\JuegoCaballerosCalabozosDragones.pdb
+E:\Facultad\laboratorioII\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.TirarDados.resources

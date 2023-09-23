@@ -69,11 +69,13 @@ namespace JuegoCaballerosCalabozosDragones
                         int[] movimientoDragones = new int[2];
                         bool hayGanador = false;
 
-
-                        if (tirarDados.ShowDialog() == DialogResult.OK)
+                        DialogResult resultadoDados = tirarDados.ShowDialog();
+                        if (resultadoDados == DialogResult.Cancel)
                         {
-                            
-                            
+                            formTablero.Close();
+                        }
+                        if (resultadoDados == DialogResult.OK)
+                        {                              
                             int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones, dado.Next(1,7));
                             switch (resultado)
                             {
@@ -121,7 +123,6 @@ namespace JuegoCaballerosCalabozosDragones
             modal.rbAzul.Enabled = false;
             modal.rbRojo.Enabled = false;
             modal.rbVerde.Enabled = false;
-            formTablero.btnTirarDado.Enabled = false;
             if (modal.ShowDialog() == DialogResult.OK)
             {
                 int dificultad = 0;
