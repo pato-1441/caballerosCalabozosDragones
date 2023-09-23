@@ -72,6 +72,11 @@
     <Compile Include="Pieza.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\FormTablero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +96,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\FormTablero.resx">
       <DependentUpon>FormTablero.cs</DependentUpon>
@@ -109,13 +115,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Tablero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\caballeroAmarillo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\caballeroAzul.png" />
+    <None Include="Resources\caballeroRojo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\caballeroRojo.png" />
+    <None Include="Resources\caballeroAzul.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\caballeroVerde.png" />
