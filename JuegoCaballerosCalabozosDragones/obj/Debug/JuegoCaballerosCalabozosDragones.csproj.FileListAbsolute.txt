@@ -36,3 +36,7 @@ E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Ver
 E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.csproj.CoreCompileInputs.cache
 E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.exe
 E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\Trabajo Práctico I\Version 4.0\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.pdb
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.Form1.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.FormNombreJugador.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.FormRanking.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.Resources.FormTablero.resources

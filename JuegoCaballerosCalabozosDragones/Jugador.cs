@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JuegoCaballerosCalabozosDragones
 {
-    internal class Jugador
+    internal class Jugador: IComparable
     {
         int puntaje;
         string nombre;
@@ -19,6 +19,7 @@ namespace JuegoCaballerosCalabozosDragones
         public int Puntaje
         {
             get { return puntaje; }
+            set {puntaje = value; }
         }
         public string Nombre
         {
@@ -113,5 +114,19 @@ namespace JuegoCaballerosCalabozosDragones
             }
             return entidades;
         }
+
+        public int CompareTo(object obj)
+        {
+            if (obj != null) { }
+
+            Jugador otroJugador = obj as Jugador;
+            if (otroJugador != null)
+            {
+                // Comparar los jugadores por puntaje
+                return this.Puntaje.CompareTo(otroJugador.Puntaje);
+            }
+        return 1;
+        }
+        }
     }
-}
+

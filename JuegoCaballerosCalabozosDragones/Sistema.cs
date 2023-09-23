@@ -31,7 +31,25 @@ namespace JuegoCaballerosCalabozosDragones
 
         public void AgregarJugadorRanking()   //Le saqué el argumento y le puse el ganador de la partida actual
         {
-            ranking.Add(partidaActual.Ganador);
+            bool hayJugador=false;
+            foreach (Jugador jugador in Ranking)
+                if (jugador.Nombre == partidaActual.Ganador.Nombre) {
+                    jugador.Puntaje++;
+                    hayJugador = true;
+                }
+            if (!hayJugador)
+            {
+                partidaActual.Ganador.Puntaje++;
+                ranking.Add(partidaActual.Ganador);
+            }
+
+           /* if (ranking.Contains(partidaActual.Ganador))
+            {
+                partidaActual.Ganador.Puntaje++;
+            }else ranking.Add(partidaActual.Ganador);*/
+            OrdenarRanking();
         }
+
+        
     }
 }
