@@ -83,7 +83,7 @@ namespace JuegoCaballerosCalabozosDragones
             }
             else
             {
-                pierdeTurno =false;
+                pierdeTurno = false;
                 resultado = 5;
             }
             return resultado;

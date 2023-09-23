@@ -91,30 +91,71 @@ namespace JuegoCaballerosCalabozosDragones
                     if (hayGanador)
                     {
                         formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " ganó.");
-                        MessageBox.Show("¡Felicidades, jugador " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + " ganaste!");
+                        MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
                     }
-                    }
-                
-
+                }               
             }
         }
 
         private void btnDemo_Click(object sender, EventArgs e)
         {
-            if (rbBasico.Checked)
+            FormTablero formTablero = new FormTablero();
+            FormNombreJugador modal = new FormNombreJugador();
+            modal.tbNombre.Enabled = false;
+            modal.rbAmarillo.Enabled = false;
+            modal.rbAzul.Enabled = false;
+            modal.rbRojo.Enabled = false;
+            modal.rbVerde.Enabled = false;
+            formTablero.btnTirarDado.Enabled = false;
+            if (modal.ShowDialog() == DialogResult.OK)
             {
-                sistema.CrearPartida(4,0);
-            }
-            else if (rbIntermedio.Checked)
-            {
-                sistema.CrearPartida(4, 1);
-            }
-            else if (rbExperto.Checked)
-            {
-                sistema.CrearPartida(4, 2);
-            } else
-            {
-                MessageBox.Show("Seleccione una dificultad para continuar por favor!");
+                int dificultad = 0;
+                if (rbBasico.Checked)
+                    dificultad = 0;
+                else if (rbIntermedio.Checked)
+                    dificultad = 1;
+                else if (rbExperto.Checked)
+                    dificultad = 2;
+
+                sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value), dificultad);
+
+                while (sistema.PartidaActual.Ganador == null)
+                {
+                    formTablero.Show();
+                    Jugador jugadorActual = ((Jugador)sistema.PartidaActual.Jugadores[sistema.PartidaActual.Turno]);
+                    int movimientoJugador;
+                    int[] movimientoDragones = new int[2];
+                    bool hayGanador = false;
+
+                    int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones);
+                    switch (resultado)
+                    {
+                        case 0:
+                            formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
+                            break;
+                        case 1:
+                            formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
+                            break;
+                        case 2:
+                            formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
+                            break;
+                        case 3:
+                            formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
+                            break;
+                        case 4:
+                            formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
+                            break;
+                        case 5:
+                            formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
+                            break;
+
+                    }
+                    if (hayGanador)
+                    {
+                        formTablero.lbEstado.Items.Add(((Jugador)sistema.PartidaActual.Ganador).Nombre + " ganó.");
+                        MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
+                    }
+                }
             }
         }
 

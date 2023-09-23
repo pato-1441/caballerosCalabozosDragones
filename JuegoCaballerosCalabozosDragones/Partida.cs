@@ -30,8 +30,7 @@ namespace JuegoCaballerosCalabozosDragones
             CrearCasillas();
             CrearJugadorHumano(nombreJugador, colorCaballero);
             CrearJugadoresVirtuales(cantJugadores, demo);
-            CrearCalabozos();
-           
+            CrearCalabozos();            
         }
 
         //SOLO CREAMOS JUGADORES VIRTUALES
@@ -42,6 +41,7 @@ namespace JuegoCaballerosCalabozosDragones
             this.dificultad = dificultad;
             CrearCasillas();
             CrearJugadoresVirtuales(cantJugadores, demo);
+            CrearCalabozos();
         }
 
         private void CrearCasillas()
@@ -94,6 +94,11 @@ namespace JuegoCaballerosCalabozosDragones
                 tablero[jugadorJugando.Dragones[0].Posicion].QuitarDragon(jugadorJugando.Dragones[0]);
                 tablero[jugadorJugando.Dragones[1].Posicion].QuitarDragon(jugadorJugando.Dragones[1]);
                 jugadores.RemoveAt(turno);
+                if (jugadores.Count == 1)
+                {
+                    ganador = (Jugador)jugadores[0];
+                    hayGanador = true;
+                }
             }
             if (turno >= (jugadores.Count - 1))
             {
@@ -163,17 +168,6 @@ namespace JuegoCaballerosCalabozosDragones
                 }
             }
         }
-
-        /*private bool VerificarGanador()
-        {
-            bool hayGanador=false;
-            if(ganador != null)
-            {
-                hayGanador = true;
-            }
-            return hayGanador;  
-        }*/
-
     }
 
 }
