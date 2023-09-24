@@ -17,6 +17,7 @@ namespace JuegoCaballerosCalabozosDragones
         int dificultad;
         Random dado = new Random();
         Jugador ganador = null;
+        List<int> coloresDisponibles = new List<int>();
         
         public int Turno { get { return turno; } }
         public ArrayList Jugadores { get { return jugadores; } }
@@ -28,6 +29,7 @@ namespace JuegoCaballerosCalabozosDragones
             demo = false;
             this.dificultad = dificultad;
             CrearCasillas();
+            AgregarColores();
             CrearJugadorHumano(nombreJugador, colorCaballero);
             CrearJugadoresVirtuales(cantJugadores, demo);
             CrearCalabozos();            
@@ -40,6 +42,7 @@ namespace JuegoCaballerosCalabozosDragones
             demo = true;
             this.dificultad = dificultad;
             CrearCasillas();
+            AgregarColores();
             CrearJugadoresVirtuales(cantJugadores, demo);
             CrearCalabozos();
         }
@@ -132,9 +135,11 @@ namespace JuegoCaballerosCalabozosDragones
                 {
                     
                     string nombreJugador = "Virtual " + (i+1);
-                    Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1, tablero[1]);
+                    Jugador jugador = new Jugador(nombreJugador, false, dificultad, coloresDisponibles[0], tablero[1]);
                     jugadores.Add(jugador);
-                    
+                    coloresDisponibles.RemoveAt(0);
+
+
                 }
             }
             else
@@ -143,18 +148,27 @@ namespace JuegoCaballerosCalabozosDragones
                 for (int i = 0; i < cantidadJugadores - 1; i++)
                 {
                     string nombreJugador = "Virtual " + (i+1);
-                    Jugador jugador = new Jugador(nombreJugador, false, dificultad, i + 1, tablero[1]);
+                    Jugador jugador = new Jugador(nombreJugador, false, dificultad, coloresDisponibles[0], tablero[1]);
                     jugadores.Add(jugador);
+                    coloresDisponibles.RemoveAt(0);
                 }
             }
                
 
+        }
+        private void AgregarColores()
+        {
+            for(int i = 0; i < 4; i++)
+            {
+                coloresDisponibles.Add(i);
+            }
         }
 
         //string nombre, bool humano, int dificultad, int color
         private void CrearJugadorHumano(string nombre, int color)
         {
             jugadores.Add(new Jugador(nombre, true, dificultad, color, tablero[1]));
+            coloresDisponibles.RemoveAt(color);
         }
         
         private void CrearCalabozos()

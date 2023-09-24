@@ -47,18 +47,24 @@ namespace JuegoCaballerosCalabozosDragones
                     dificultad = 2;
 
                 if (modal.rbRojo.Checked)
-                    color = 1;
+                    color = 0;
                 else if (modal.rbAzul.Checked)
-                    color = 2;
+                    color = 1;
                 else if (modal.rbAmarillo.Checked)
-                    color = 3;
+                    color = 2;
                 else if (modal.rbVerde.Checked)
-                    color = 4;
+                    color = 3;
                 if (modal.tbNombre.Text != "")
                 {
                     jugo = true;
                     sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
                                         dificultad, modal.tbNombre.Text, color);
+
+                    formTablero.pbCaballeroVerde.Location = new Point(330, 90);
+                    formTablero.pbCaballeroRojo.Location = new Point(344, 90);
+                    formTablero.pbCaballeroAzul.Location = new Point(367, 90);
+                    formTablero.pbCaballeroAmarillo.Location = new Point(389, 90);
+
                     bool salir = false;
                     while (sistema.PartidaActual.Ganador == null && salir==false)
                     {
@@ -85,19 +91,23 @@ namespace JuegoCaballerosCalabozosDragones
                         if (resultadoDados == DialogResult.OK)
                         {                              
                             int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones, dado.Next(1,7));
+                            //int posX, posY, PosBase ;
                             switch (resultado)
                             {
                                 case 0:
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
+                                    if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 1:
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
+                                    if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 2:
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
                                     break;
                                 case 3:
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
+                                    if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 4:
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
@@ -143,7 +153,10 @@ namespace JuegoCaballerosCalabozosDragones
                     dificultad = 2;
 
                 sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value), dificultad);
-
+                formTablero.pbCaballeroVerde.Location = new Point(330, 90);
+                formTablero.pbCaballeroRojo.Location = new Point(344, 90);
+                formTablero.pbCaballeroAzul.Location = new Point(389, 90 );
+                formTablero.pbCaballeroAmarillo.Location = new Point(330, 90);
                 while (sistema.PartidaActual.Ganador == null)
                 {
                     formTablero.Show();
@@ -157,15 +170,21 @@ namespace JuegoCaballerosCalabozosDragones
                     {
                         case 0:
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
+                            if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
+                            
                             break;
                         case 1:
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
+                            if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
+                           
                             break;
                         case 2:
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
                             break;
                         case 3:
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
+                            if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
+                           
                             break;
                         case 4:
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
@@ -182,6 +201,49 @@ namespace JuegoCaballerosCalabozosDragones
                     }
                 }
             }
+        }
+
+        private bool MoverCaballero(int color, int posicion, FormTablero tablero)
+        {
+            bool exito = false;
+            int posX, posY;
+            
+            switch (color)
+            {
+                    case 0:
+                    if ((posicion % 10) == 0) posX = 344 + 9 * 103;
+                    else posX = 344 + (((posicion % 10) - 1) * 103);
+                    if(posicion % 10 == 0) posY= posY = 90 + ((((int)posicion / 10)-1) * 119);
+                    else posY = 90+(((int)posicion/10)*119);
+                    tablero.pbCaballeroRojo.Location = new Point(posX, posY);
+                    exito = true;
+                    break;
+                    case 1:
+                    if ((posicion % 10) == 0) posX =367 + 9 * 103;
+                    else posX = 367 + (((posicion % 10) - 1) * 103); ;
+                    if (posicion % 10 == 0) posY = posY = 90 + ((((int)posicion / 10) - 1) * 119);
+                    else posY = 90 + (((int)posicion / 10) * 119);
+                    tablero.pbCaballeroAzul.Location = new Point(posX, posY);
+                    exito = true;
+                    break;
+                    case 2:
+                    if ((posicion % 10) == 0) posX =389+ 9 * 103;
+                    else posX = 389 + (((posicion % 10) - 1) * 103); ;
+                    if (posicion % 10 == 0) posY = posY = 90 + ((((int)posicion / 10) - 1) * 119);
+                    else posY = 90 + (((int)posicion / 10) * 119);
+                    tablero.pbCaballeroAmarillo.Location = new Point(posX, posY);
+                    exito = true;
+                    break;
+                    case 3:
+                    if ((posicion % 10) == 0) posX = 330 + 9 * 103;
+                    else posX = 330 + (((posicion % 10)-1) * 103); ;
+                    if (posicion % 10 == 0) posY = posY = 90 + ((((int)posicion / 10) - 1) * 119);
+                    else posY = 90 + (((int)posicion / 10) * 119);
+                    tablero.pbCaballeroVerde.Location = new Point(posX, posY);
+                    exito = true;
+                    break;
+            }
+            return exito;
         }
 
         private void btnRanking_Click(object sender, EventArgs e)

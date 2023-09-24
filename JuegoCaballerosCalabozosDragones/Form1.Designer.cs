@@ -51,34 +51,43 @@
             // rbBasico
             // 
             this.rbBasico.AutoSize = true;
+            this.rbBasico.BackColor = System.Drawing.Color.Transparent;
             this.rbBasico.Checked = true;
-            this.rbBasico.Location = new System.Drawing.Point(333, 326);
+            this.rbBasico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbBasico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbBasico.Location = new System.Drawing.Point(310, 329);
             this.rbBasico.Name = "rbBasico";
-            this.rbBasico.Size = new System.Drawing.Size(57, 17);
+            this.rbBasico.Size = new System.Drawing.Size(78, 22);
             this.rbBasico.TabIndex = 1;
             this.rbBasico.TabStop = true;
             this.rbBasico.Text = "Básico";
-            this.rbBasico.UseVisualStyleBackColor = true;
+            this.rbBasico.UseVisualStyleBackColor = false;
             // 
             // rbIntermedio
             // 
             this.rbIntermedio.AutoSize = true;
-            this.rbIntermedio.Location = new System.Drawing.Point(406, 326);
+            this.rbIntermedio.BackColor = System.Drawing.Color.Transparent;
+            this.rbIntermedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbIntermedio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbIntermedio.Location = new System.Drawing.Point(394, 329);
             this.rbIntermedio.Name = "rbIntermedio";
-            this.rbIntermedio.Size = new System.Drawing.Size(74, 17);
+            this.rbIntermedio.Size = new System.Drawing.Size(105, 22);
             this.rbIntermedio.TabIndex = 2;
             this.rbIntermedio.Text = "Intermedio";
-            this.rbIntermedio.UseVisualStyleBackColor = true;
+            this.rbIntermedio.UseVisualStyleBackColor = false;
             // 
             // rbExperto
             // 
             this.rbExperto.AutoSize = true;
-            this.rbExperto.Location = new System.Drawing.Point(497, 326);
+            this.rbExperto.BackColor = System.Drawing.Color.Transparent;
+            this.rbExperto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbExperto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbExperto.Location = new System.Drawing.Point(505, 329);
             this.rbExperto.Name = "rbExperto";
-            this.rbExperto.Size = new System.Drawing.Size(61, 17);
+            this.rbExperto.Size = new System.Drawing.Size(84, 22);
             this.rbExperto.TabIndex = 3;
             this.rbExperto.Text = "Experto";
-            this.rbExperto.UseVisualStyleBackColor = true;
+            this.rbExperto.UseVisualStyleBackColor = false;
             // 
             // btnDemo
             // 

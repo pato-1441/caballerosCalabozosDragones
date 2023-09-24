@@ -66,7 +66,7 @@
             // 
             this.pbCaballeroAzul.BackColor = System.Drawing.Color.Transparent;
             this.pbCaballeroAzul.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroAzul;
-            this.pbCaballeroAzul.Location = new System.Drawing.Point(367, 90);
+            this.pbCaballeroAzul.Location = new System.Drawing.Point(367, 209);
             this.pbCaballeroAzul.Name = "pbCaballeroAzul";
             this.pbCaballeroAzul.Size = new System.Drawing.Size(39, 38);
             this.pbCaballeroAzul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@
             // 
             this.pbCaballeroRojo.BackColor = System.Drawing.Color.Transparent;
             this.pbCaballeroRojo.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroRojo;
-            this.pbCaballeroRojo.Location = new System.Drawing.Point(344, 90);
+            this.pbCaballeroRojo.Location = new System.Drawing.Point(344, 209);
             this.pbCaballeroRojo.Name = "pbCaballeroRojo";
             this.pbCaballeroRojo.Size = new System.Drawing.Size(39, 38);
             this.pbCaballeroRojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // 
             this.pbCaballeroAmarillo.BackColor = System.Drawing.Color.Transparent;
             this.pbCaballeroAmarillo.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroAmarillo;
-            this.pbCaballeroAmarillo.Location = new System.Drawing.Point(389, 90);
+            this.pbCaballeroAmarillo.Location = new System.Drawing.Point(389, 209);
             this.pbCaballeroAmarillo.Name = "pbCaballeroAmarillo";
             this.pbCaballeroAmarillo.Size = new System.Drawing.Size(39, 38);
             this.pbCaballeroAmarillo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,7 +99,7 @@
             // 
             this.pbCaballeroVerde.BackColor = System.Drawing.Color.Transparent;
             this.pbCaballeroVerde.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroVerde;
-            this.pbCaballeroVerde.Location = new System.Drawing.Point(330, 90);
+            this.pbCaballeroVerde.Location = new System.Drawing.Point(330, 209);
             this.pbCaballeroVerde.Name = "pbCaballeroVerde";
             this.pbCaballeroVerde.Size = new System.Drawing.Size(39, 38);
             this.pbCaballeroVerde.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +113,7 @@
             this.pbTablero.Image = ((System.Drawing.Image)(resources.GetObject("pbTablero.Image")));
             this.pbTablero.Location = new System.Drawing.Point(327, 13);
             this.pbTablero.Name = "pbTablero";
-            this.pbTablero.Size = new System.Drawing.Size(1029, 590);
+            this.pbTablero.Size = new System.Drawing.Size(1034, 592);
             this.pbTablero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTablero.TabIndex = 2;
             this.pbTablero.TabStop = false;
@@ -150,11 +150,11 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pbTablero;
-        private System.Windows.Forms.PictureBox pbCaballeroVerde;
-        private System.Windows.Forms.PictureBox pbCaballeroAmarillo;
-        private System.Windows.Forms.PictureBox pbCaballeroRojo;
-        private System.Windows.Forms.PictureBox pbCaballeroAzul;
         public System.Windows.Forms.ListBox lbEstado;
         public System.Windows.Forms.Button btnSalir;
+        public System.Windows.Forms.PictureBox pbCaballeroVerde;
+        public System.Windows.Forms.PictureBox pbCaballeroAmarillo;
+        public System.Windows.Forms.PictureBox pbCaballeroRojo;
+        public System.Windows.Forms.PictureBox pbCaballeroAzul;
     }
 }
