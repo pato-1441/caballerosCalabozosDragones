@@ -115,7 +115,14 @@ namespace JuegoCaballerosCalabozosDragones
                                     if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 2:
+                                    if (dificultad > 0)
+                                    {
+                                        int[] murieron = { 1, 1 };
+                                        formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
+                                        if (!MoverDragon(jugadorActual.Caballero.Color, murieron, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
+                                    }
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
+                                    if (!MoverCaballero(jugadorActual.Caballero.Color, 1, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 3:
                                     if (dificultad > 0)
@@ -132,6 +139,7 @@ namespace JuegoCaballerosCalabozosDragones
                                         formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                         if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                                     }
+                                    if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
                                     break;
                                 case 5:
