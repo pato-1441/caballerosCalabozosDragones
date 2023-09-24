@@ -138,7 +138,7 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tablero";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroAzul)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroRojo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroAmarillo)).EndInit();
