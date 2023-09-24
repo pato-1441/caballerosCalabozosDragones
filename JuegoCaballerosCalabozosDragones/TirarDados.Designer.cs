@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TirarDados));
             this.btnTirarDados = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -47,13 +48,15 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSalir.Location = new System.Drawing.Point(11, 130);
+            this.btnSalir.Location = new System.Drawing.Point(11, 123);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(258, 53);
+            this.btnSalir.Size = new System.Drawing.Size(258, 60);
             this.btnSalir.TabIndex = 1;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             // 
             // TirarDados
             // 

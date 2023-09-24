@@ -76,13 +76,15 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSalir.Location = new System.Drawing.Point(35, 518);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(258, 53);
             this.btnSalir.TabIndex = 9;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // pbCalabozo1
@@ -229,7 +231,6 @@
             // 
             // pbTablero
             // 
-            this.pbTablero.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.Tablero;
             this.pbTablero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbTablero.Image = ((System.Drawing.Image)(resources.GetObject("pbTablero.Image")));
             this.pbTablero.Location = new System.Drawing.Point(327, 13);
@@ -263,6 +264,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1368, 615);
             this.ControlBox = false;
             this.Controls.Add(this.pbCalabozo3);
