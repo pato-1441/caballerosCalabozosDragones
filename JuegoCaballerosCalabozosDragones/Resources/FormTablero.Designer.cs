@@ -66,7 +66,7 @@
             // 
             this.pbCaballeroAzul.BackColor = System.Drawing.Color.Transparent;
             this.pbCaballeroAzul.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroAzul;
-            this.pbCaballeroAzul.Location = new System.Drawing.Point(367, 209);
+            this.pbCaballeroAzul.Location = new System.Drawing.Point(367, 90);
             this.pbCaballeroAzul.Name = "pbCaballeroAzul";
             this.pbCaballeroAzul.Size = new System.Drawing.Size(39, 38);
             this.pbCaballeroAzul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@
             // 
             this.pbCaballeroRojo.BackColor = System.Drawing.Color.Transparent;
             this.pbCaballeroRojo.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroRojo;
-            this.pbCaballeroRojo.Location = new System.Drawing.Point(344, 209);
+            this.pbCaballeroRojo.Location = new System.Drawing.Point(344, 90);
             this.pbCaballeroRojo.Name = "pbCaballeroRojo";
             this.pbCaballeroRojo.Size = new System.Drawing.Size(39, 38);
             this.pbCaballeroRojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // 
             this.pbCaballeroAmarillo.BackColor = System.Drawing.Color.Transparent;
             this.pbCaballeroAmarillo.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroAmarillo;
-            this.pbCaballeroAmarillo.Location = new System.Drawing.Point(389, 209);
+            this.pbCaballeroAmarillo.Location = new System.Drawing.Point(389, 90);
             this.pbCaballeroAmarillo.Name = "pbCaballeroAmarillo";
             this.pbCaballeroAmarillo.Size = new System.Drawing.Size(39, 38);
             this.pbCaballeroAmarillo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,7 +99,7 @@
             // 
             this.pbCaballeroVerde.BackColor = System.Drawing.Color.Transparent;
             this.pbCaballeroVerde.Image = global::JuegoCaballerosCalabozosDragones.Properties.Resources.caballeroVerde;
-            this.pbCaballeroVerde.Location = new System.Drawing.Point(330, 209);
+            this.pbCaballeroVerde.Location = new System.Drawing.Point(330, 90);
             this.pbCaballeroVerde.Name = "pbCaballeroVerde";
             this.pbCaballeroVerde.Size = new System.Drawing.Size(39, 38);
             this.pbCaballeroVerde.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

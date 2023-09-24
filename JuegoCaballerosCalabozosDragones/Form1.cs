@@ -95,10 +95,12 @@ namespace JuegoCaballerosCalabozosDragones
                             switch (resultado)
                             {
                                 case 0:
+                                    formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
                                     if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 1:
+                                    formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
                                     if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
@@ -106,13 +108,16 @@ namespace JuegoCaballerosCalabozosDragones
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
                                     break;
                                 case 3:
+                                    formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
                                     if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 4:
+                                    formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
                                     break;
                                 case 5:
+                                    formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
                                     break;
 
@@ -169,11 +174,14 @@ namespace JuegoCaballerosCalabozosDragones
                     switch (resultado)
                     {
                         case 0:
+                            formTablero.lbEstado.Items.Add("Los dragones de "+jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0]+ " y "+ movimientoDragones[1]);
+                            
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
                             if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                             
                             break;
                         case 1:
+                            formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
                             if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                            
@@ -182,14 +190,18 @@ namespace JuegoCaballerosCalabozosDragones
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " murió.");
                             break;
                         case 3:
+                            formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
                             if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                            
                             break;
                         case 4:
+                            formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
                             break;
                         case 5:
+                            formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
+
                             formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
                             break;
 
