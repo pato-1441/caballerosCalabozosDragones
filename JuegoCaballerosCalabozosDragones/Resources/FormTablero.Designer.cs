@@ -251,11 +251,15 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+<<<<<<< HEAD
             this.Text = "Tablero";
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonAzul1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonAmarillo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonRojo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonVerde1)).EndInit();
+=======
+            this.Text = " ";
+>>>>>>> 37978167d18419c6765e699764ad06f883070fbe
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroAzul)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroRojo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaballeroAmarillo)).EndInit();
