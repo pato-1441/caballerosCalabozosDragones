@@ -47,7 +47,7 @@
             this.button1.Location = new System.Drawing.Point(12, 182);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 43);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -65,7 +65,7 @@
             this.tbNombre.Location = new System.Drawing.Point(15, 28);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(165, 20);
-            this.tbNombre.TabIndex = 2;
+            this.tbNombre.TabIndex = 1;
             // 
             // label2
             // 
@@ -83,7 +83,7 @@
             this.rbRojo.Location = new System.Drawing.Point(15, 124);
             this.rbRojo.Name = "rbRojo";
             this.rbRojo.Size = new System.Drawing.Size(47, 17);
-            this.rbRojo.TabIndex = 4;
+            this.rbRojo.TabIndex = 3;
             this.rbRojo.TabStop = true;
             this.rbRojo.Text = "Rojo";
             this.rbRojo.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             this.rbAmarillo.Location = new System.Drawing.Point(95, 124);
             this.rbAmarillo.Name = "rbAmarillo";
             this.rbAmarillo.Size = new System.Drawing.Size(61, 17);
-            this.rbAmarillo.TabIndex = 6;
+            this.rbAmarillo.TabIndex = 4;
             this.rbAmarillo.Text = "Amarillo";
             this.rbAmarillo.UseVisualStyleBackColor = true;
             // 
@@ -114,7 +114,7 @@
             this.rbVerde.Location = new System.Drawing.Point(95, 147);
             this.rbVerde.Name = "rbVerde";
             this.rbVerde.Size = new System.Drawing.Size(53, 17);
-            this.rbVerde.TabIndex = 7;
+            this.rbVerde.TabIndex = 6;
             this.rbVerde.Text = "Verde";
             this.rbVerde.UseVisualStyleBackColor = true;
             // 
@@ -133,7 +133,7 @@
             0});
             this.nudCantJugadores.Name = "nudCantJugadores";
             this.nudCantJugadores.Size = new System.Drawing.Size(120, 20);
-            this.nudCantJugadores.TabIndex = 8;
+            this.nudCantJugadores.TabIndex = 2;
             this.nudCantJugadores.Value = new decimal(new int[] {
             2,
             0,
@@ -164,7 +164,11 @@
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormNombreJugador";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNombreJugador";
             ((System.ComponentModel.ISupportInitialize)(this.nudCantJugadores)).EndInit();

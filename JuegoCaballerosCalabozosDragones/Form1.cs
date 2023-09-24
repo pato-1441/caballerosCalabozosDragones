@@ -18,7 +18,6 @@ namespace JuegoCaballerosCalabozosDragones
             InitializeComponent();
         }
         Sistema sistema;
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -60,20 +59,29 @@ namespace JuegoCaballerosCalabozosDragones
                     jugo = true;
                     sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
                                         dificultad, modal.tbNombre.Text, color);
-                    
-                    while (sistema.PartidaActual.Ganador == null)
+                    bool salir = false;
+                    while (sistema.PartidaActual.Ganador == null && salir==false)
                     {
                         formTablero.Show();
                         Jugador jugadorActual = ((Jugador)sistema.PartidaActual.Jugadores[sistema.PartidaActual.Turno]);
                         int movimientoJugador;
                         int[] movimientoDragones = new int[2];
                         bool hayGanador = false;
-
-                        DialogResult resultadoDados = tirarDados.ShowDialog();
-                        if (resultadoDados == DialogResult.Cancel)
+                        //Funcion para que solo tire si es humano
+                        DialogResult resultadoDados;
+                        if (jugadorActual.Humano)
                         {
-                            formTablero.Close();
+                            resultadoDados = tirarDados.ShowDialog();
+                            if (resultadoDados == DialogResult.Cancel)
+                            {
+                                formTablero.Dispose();
+                                salir = true;
+                            }
                         }
+                        else { 
+                        resultadoDados=DialogResult.OK;
+                        }
+                        //Mostrar Resultados en el listBox
                         if (resultadoDados == DialogResult.OK)
                         {                              
                             int resultado = sistema.PartidaActual.Jugar(out movimientoJugador, ref hayGanador, ref movimientoDragones, dado.Next(1,7));
@@ -104,6 +112,7 @@ namespace JuegoCaballerosCalabozosDragones
                                 formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " ganó.");
                                 sistema.AgregarJugadorRanking();
                                 MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
+                            
                             }
                         }
                         

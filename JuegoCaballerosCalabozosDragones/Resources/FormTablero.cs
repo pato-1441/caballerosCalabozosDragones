@@ -17,15 +17,9 @@ namespace JuegoCaballerosCalabozosDragones.Resources
             InitializeComponent();
         }
 
-
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             Dispose();
-        }
-
-        private void btnTirarDado_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

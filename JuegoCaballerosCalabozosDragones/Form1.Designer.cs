@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnJugar = new System.Windows.Forms.Button();
             this.rbBasico = new System.Windows.Forms.RadioButton();
             this.rbIntermedio = new System.Windows.Forms.RadioButton();
@@ -123,6 +124,7 @@
             this.Controls.Add(this.rbIntermedio);
             this.Controls.Add(this.rbBasico);
             this.Controls.Add(this.btnJugar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caballeros Dragones y Calabozos";
