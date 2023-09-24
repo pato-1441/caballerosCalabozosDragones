@@ -150,5 +150,17 @@
   <ItemGroup>
     <None Include="Resources\boton.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragonRojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragonAzul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragonAmarillo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragonVerde.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
