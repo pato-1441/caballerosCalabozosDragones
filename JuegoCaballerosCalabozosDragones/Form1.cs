@@ -64,11 +64,12 @@ namespace JuegoCaballerosCalabozosDragones
                     formTablero.pbCaballeroRojo.Location = new Point(344, 90);
                     formTablero.pbCaballeroAzul.Location = new Point(367, 90);
                     formTablero.pbCaballeroAmarillo.Location = new Point(389, 90);
-
+                    MoverCalabozo(sistema.PartidaActual.Calabozos, formTablero);
                     bool salir = false;
                     while (sistema.PartidaActual.Ganador == null && salir == false)
                     {
                         formTablero.Show();
+                        
                         Jugador jugadorActual = ((Jugador)sistema.PartidaActual.Jugadores[sistema.PartidaActual.Turno]);
                         int movimientoJugador;
                         int[] movimientoDragones = new int[2];
@@ -96,29 +97,20 @@ namespace JuegoCaballerosCalabozosDragones
                             switch (resultado)
                             {
                                 case 0:
-<<<<<<< HEAD
                                     if (dificultad > 0)
                                     {
                                         formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                         if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                                     }
-=======
-                                    if(dificultad>0)
-                                    formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
->>>>>>> 37978167d18419c6765e699764ad06f883070fbe
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
                                     if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 1:
                                     if (dificultad > 0)
-<<<<<<< HEAD
                                     {
                                         formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                         if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                                     }
-=======
-                                        formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
->>>>>>> 37978167d18419c6765e699764ad06f883070fbe
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
                                     if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
@@ -127,39 +119,27 @@ namespace JuegoCaballerosCalabozosDragones
                                     break;
                                 case 3:
                                     if (dificultad > 0)
-<<<<<<< HEAD
                                     {
                                         formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                         if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                                     }
-=======
-                                        formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
->>>>>>> 37978167d18419c6765e699764ad06f883070fbe
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
                                     if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
                                     break;
                                 case 4:
                                     if (dificultad > 0)
-<<<<<<< HEAD
                                     {
                                         formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                         if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                                     }
-=======
-                                        formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
->>>>>>> 37978167d18419c6765e699764ad06f883070fbe
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " perdió su turno.");
                                     break;
                                 case 5:
                                     if (dificultad > 0)
-<<<<<<< HEAD
                                     {
                                         formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                         if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                                     }
-=======
-                                        formTablero.lbEstado.Items.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
->>>>>>> 37978167d18419c6765e699764ad06f883070fbe
                                     formTablero.lbEstado.Items.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
                                     break;
 
@@ -204,6 +184,7 @@ namespace JuegoCaballerosCalabozosDragones
                 formTablero.pbCaballeroRojo.Location = new Point(344, 90);
                 formTablero.pbCaballeroAzul.Location = new Point(389, 90);
                 formTablero.pbCaballeroAmarillo.Location = new Point(330, 90);
+                MoverCalabozo(sistema.PartidaActual.Calabozos, formTablero);
                 while (sistema.PartidaActual.Ganador == null)
                 {
                     formTablero.Show();
@@ -277,6 +258,24 @@ namespace JuegoCaballerosCalabozosDragones
                 }
             }
         }
+
+        private void MoverCalabozo(Pieza[] calabozos, FormTablero tablero)
+        {
+            int posX, posY;
+
+            for (int i = 0; i < 3; i++)
+            {
+                if ((calabozos[i].Posicion % 10) == 0) posX = 354 + 9 * 103;
+                else posX = 354 + (((calabozos[i].Posicion % 10) - 1) * 103);
+                if (calabozos[i].Posicion % 10 == 0) posY = 59 + ((((int)calabozos[i].Posicion / 10) - 1) * 119);
+                else posY = 59 + (((int)calabozos[i].Posicion / 10) * 119);
+                if (i == 0)
+                    tablero.pbCalabozo1.Location = new Point(posX, posY);
+                else if (i == 1) tablero.pbCalabozo2.Location = new Point(posX, posY - 10);
+                else tablero.pbCalabozo3.Location = new Point(posX, posY - 10);
+            }
+        }
+            
         private bool MoverDragon(int color, int[] posiciones, FormTablero tablero)
         {
             bool exito = false;

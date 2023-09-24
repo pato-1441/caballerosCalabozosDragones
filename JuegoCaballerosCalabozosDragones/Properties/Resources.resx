@@ -121,6 +121,9 @@
   <data name="dragonRojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dragonRojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dragonVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dragonVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,7 +154,7 @@
   <data name="caballeroAmarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caballeroAmarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dragonVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dragonVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calabozo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calabozo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

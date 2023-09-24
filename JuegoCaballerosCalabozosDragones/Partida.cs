@@ -19,6 +19,7 @@ namespace JuegoCaballerosCalabozosDragones
         Jugador ganador = null;
         List<int> coloresDisponibles = new List<int>();
         
+        public Pieza[] Calabozos { get { return calabozos;} }
         public int Turno { get { return turno; } }
         public ArrayList Jugadores { get { return jugadores; } }
         public Jugador Ganador { get { return ganador; } }

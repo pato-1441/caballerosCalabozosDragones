@@ -113,6 +113,16 @@ namespace JuegoCaballerosCalabozosDragones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calabozo {
+            get {
+                object obj = ResourceManager.GetObject("calabozo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dados {
             get {
                 object obj = ResourceManager.GetObject("dados", resourceCulture);
