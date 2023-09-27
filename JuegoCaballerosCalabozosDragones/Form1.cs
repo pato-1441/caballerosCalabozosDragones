@@ -7,7 +7,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,13 +28,13 @@ namespace JuegoCaballerosCalabozosDragones
         private void Form1_Load(object sender, EventArgs e)
         {
             Splash ventanaSplash = new Splash();
-            ventanaSplash.ShowDialog();
+          //  ventanaSplash.ShowDialog();
             sistema = new Sistema();
             jugadas = new ArrayList();
             reversa = new ArrayList();
         }
         
-        private void btnJugar_Click(object sender, EventArgs e)
+        private async void btnJugar_Click(object sender, EventArgs e)
         {
             jugadas.Clear();
             Random dado = new Random();
@@ -92,18 +91,19 @@ namespace JuegoCaballerosCalabozosDragones
                         DialogResult resultadoDados;
                         if (jugadorActual.Humano)
                         {
+                           
                             resultadoDados = tirarDados.ShowDialog();
                             if (resultadoDados == DialogResult.Cancel)
                             {
                                 formTablero.Dispose();
                                 salir = true;
                             }
+                            
                         }
                         else
                         {
-                            formTablero.ListaCaballeros[jugadorActual.Caballero.Color].SendToBack();
-                            Thread.Sleep(100);
-                            formTablero.ListaCaballeros[jugadorActual.Caballero.Color].BringToFront();
+                            
+                            await Task.Delay(500);
                             resultadoDados = DialogResult.OK;
                             
                         }
