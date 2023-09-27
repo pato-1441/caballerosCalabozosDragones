@@ -29,16 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TirarDados));
-            this.btnTirarDados = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnTirarDados = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSalir.Location = new System.Drawing.Point(11, 123);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(258, 60);
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.UseVisualStyleBackColor = false;
             // 
             // btnTirarDados
             // 
-            this.btnTirarDados.BackColor = System.Drawing.Color.Transparent;
+            this.btnTirarDados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnTirarDados.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.dados;
             this.btnTirarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTirarDados.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnTirarDados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnTirarDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.btnTirarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTirarDados.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnTirarDados.Location = new System.Drawing.Point(11, 11);
             this.btnTirarDados.Margin = new System.Windows.Forms.Padding(2);
             this.btnTirarDados.Name = "btnTirarDados";
@@ -46,22 +67,11 @@
             this.btnTirarDados.TabIndex = 0;
             this.btnTirarDados.UseVisualStyleBackColor = false;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSalir.Location = new System.Drawing.Point(11, 123);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(258, 60);
-            this.btnSalir.TabIndex = 1;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            // 
             // TirarDados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(281, 195);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
