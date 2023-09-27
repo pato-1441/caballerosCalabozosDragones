@@ -28,7 +28,7 @@ namespace JuegoCaballerosCalabozosDragones
         private void Form1_Load(object sender, EventArgs e)
         {
             Splash ventanaSplash = new Splash();
-          //  ventanaSplash.ShowDialog();
+            ventanaSplash.ShowDialog();
             sistema = new Sistema();
             jugadas = new ArrayList();
             reversa = new ArrayList();
@@ -76,14 +76,14 @@ namespace JuegoCaballerosCalabozosDragones
                     if (dificultad > 1) MoverCalabozo(sistema.PartidaActual.Calabozos, formTablero);
                     else
                     {
-                        formTablero.pbCalabozo1.SendToBack();
-                        formTablero.pbCalabozo2.SendToBack();
-                        formTablero.pbCalabozo3.SendToBack();
+                        formTablero.pbCalabozo1.Visible=false;
+                        formTablero.pbCalabozo2.Visible = false;
+                        formTablero.pbCalabozo3.Visible = false;
                         if(dificultad < 1)
                         {
                             foreach(PictureBox dragon in formTablero.Dragones)
                             {
-                                dragon.SendToBack();
+                                dragon.Visible=false;
                             }
                         }
                     }
@@ -224,16 +224,16 @@ namespace JuegoCaballerosCalabozosDragones
                     dificultad = 2;
 
                 sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value), dificultad);
-                formTablero.pbCaballeroVerde.Location = new Point(330, 90);
+               /* formTablero.pbCaballeroVerde.Location = new Point(330, 90);
                 formTablero.pbCaballeroRojo.Location = new Point(344, 90);
                 formTablero.pbCaballeroAzul.Location = new Point(389, 90);
-                formTablero.pbCaballeroAmarillo.Location = new Point(330, 90);
+                formTablero.pbCaballeroAmarillo.Location = new Point(330, 90);*/
                 if(dificultad>1)MoverCalabozo(sistema.PartidaActual.Calabozos, formTablero);
                 else
                 {
-                    formTablero.pbCalabozo1.SendToBack();
-                    formTablero.pbCalabozo2.SendToBack();
-                    formTablero.pbCalabozo3.SendToBack();
+                    formTablero.pbCalabozo1.Visible = false;
+                    formTablero.pbCalabozo2.Visible = false;
+                    formTablero.pbCalabozo3.Visible = false;
                 }
                 while (sistema.PartidaActual.Ganador == null)
                 {
