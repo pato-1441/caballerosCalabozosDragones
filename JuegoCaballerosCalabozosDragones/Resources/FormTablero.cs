@@ -15,16 +15,29 @@ namespace JuegoCaballerosCalabozosDragones.Resources
         public FormTablero()
         {
             InitializeComponent();
+            dragones = new List<PictureBox>();
+            AgregarDragones();
         }
+        List<PictureBox> dragones;
+        public List<PictureBox> Dragones { get { return dragones; } }
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
             Dispose();
         } 
         private void FormTablero_Load(object sender, EventArgs e)
         {
+            
         }
-        private void ArmarListaCaballeros()
+        private void AgregarDragones()
         {
+            dragones.Add(pbDragonRojo1);
+            dragones.Add(pbDragonRojo2);
+            dragones.Add(pbDragonAzul1);
+            dragones.Add(pbDragonAzul2);
+            dragones.Add(pbDragonAmarillo1);
+            dragones.Add(pbDragonAmarillo2);
+            dragones.Add(pbDragonVerde1);
+            dragones.Add(pbDragonVerde2);
         }
 
        

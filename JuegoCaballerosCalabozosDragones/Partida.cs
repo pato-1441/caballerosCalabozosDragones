@@ -33,7 +33,7 @@ namespace JuegoCaballerosCalabozosDragones
             AgregarColores();
             CrearJugadorHumano(nombreJugador, colorCaballero);
             CrearJugadoresVirtuales(cantJugadores, demo);
-            CrearCalabozos();            
+            CrearCalabozos();
         }
 
         //SOLO CREAMOS JUGADORES VIRTUALES

@@ -66,17 +66,26 @@ namespace JuegoCaballerosCalabozosDragones
                     jugo = true;
                     sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
                                         dificultad, modal.tbNombre.Text, color);
+                        
 
-                    formTablero.pbCaballeroVerde.Location = new Point(330, 90);
+                   /* formTablero.pbCaballeroVerde.Location = new Point(330, 90);
                     formTablero.pbCaballeroRojo.Location = new Point(344, 90);
                     formTablero.pbCaballeroAzul.Location = new Point(367, 90);
-                    formTablero.pbCaballeroAmarillo.Location = new Point(389, 90);
+                    formTablero.pbCaballeroAmarillo.Location = new Point(389, 90);*/
+
                     if (dificultad > 1) MoverCalabozo(sistema.PartidaActual.Calabozos, formTablero);
                     else
                     {
                         formTablero.pbCalabozo1.SendToBack();
                         formTablero.pbCalabozo2.SendToBack();
                         formTablero.pbCalabozo3.SendToBack();
+                        if(dificultad < 1)
+                        {
+                            foreach(PictureBox dragon in formTablero.Dragones)
+                            {
+                                dragon.SendToBack();
+                            }
+                        }
                     }
                     bool salir = false;
                     while (sistema.PartidaActual.Ganador == null && salir == false)

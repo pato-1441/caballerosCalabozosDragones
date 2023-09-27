@@ -29,11 +29,11 @@ namespace JuegoCaballerosCalabozosDragones
             partidaActual = new Partida(cantidadJugadores, modoJuego);
         }
 
-        public void AgregarJugadorRanking()   //Le saqué el argumento y le puse el ganador de la partida actual
+        public void AgregarJugadorRanking() 
         {
             bool hayJugador=false;
             foreach (Jugador jugador in Ranking)
-                if (jugador.Nombre == partidaActual.Ganador.Nombre) {
+                if (jugador.Nombre.ToLower() == partidaActual.Ganador.Nombre.ToLower()) {
                     jugador.Puntaje++;
                     hayJugador = true;
                 }
@@ -42,11 +42,6 @@ namespace JuegoCaballerosCalabozosDragones
                 partidaActual.Ganador.Puntaje++;
                 ranking.Add(partidaActual.Ganador);
             }
-
-           /* if (ranking.Contains(partidaActual.Ganador))
-            {
-                partidaActual.Ganador.Puntaje++;
-            }else ranking.Add(partidaActual.Ganador);*/
             OrdenarRanking();
         }
 
