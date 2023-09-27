@@ -88,6 +88,7 @@ namespace JuegoCaballerosCalabozosDragones
                         }
                     }
                     bool salir = false;
+                    modal.Dispose();
                     while (sistema.PartidaActual.Ganador == null && salir == false)
                     {
                         formTablero.Show();
@@ -105,6 +106,7 @@ namespace JuegoCaballerosCalabozosDragones
                             if (resultadoDados == DialogResult.Cancel)
                             {
                                 formTablero.Dispose();
+                                tirarDados.Dispose();
                                 salir = true;
                             }
                             
@@ -116,6 +118,7 @@ namespace JuegoCaballerosCalabozosDragones
                             resultadoDados = DialogResult.OK;
                             
                         }
+
                         //Mostrar Resultados en el listBox
                         if (resultadoDados == DialogResult.OK)
                         { 
@@ -188,6 +191,7 @@ namespace JuegoCaballerosCalabozosDragones
 
                                 sistema.AgregarJugadorRanking();
                                 MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
+                                tirarDados.Dispose();
 
                             }
                         }
@@ -453,7 +457,8 @@ namespace JuegoCaballerosCalabozosDragones
             {
                 modal.lbRanking.Items.Add(jugador.Nombre+" // Puntos: "+jugador.Puntaje);
             }
-            modal.Show();
+            modal.ShowDialog();
+            modal.Dispose();
         }
         
     }

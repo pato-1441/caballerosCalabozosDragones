@@ -80,9 +80,9 @@
             this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSalir.Location = new System.Drawing.Point(35, 518);
+            this.btnSalir.Location = new System.Drawing.Point(35, 511);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(258, 53);
+            this.btnSalir.Size = new System.Drawing.Size(258, 60);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
