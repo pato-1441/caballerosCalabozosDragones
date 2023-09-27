@@ -294,6 +294,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tablero";
+            this.Load += new System.EventHandler(this.FormTablero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCalabozo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonAzul2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDragonAmarillo2)).EndInit();

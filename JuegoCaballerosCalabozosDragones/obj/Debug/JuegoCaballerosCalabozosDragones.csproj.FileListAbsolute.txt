@@ -57,3 +57,4 @@ C:\Users\julie\OneDrive\Documentos\Laboratorio II\caballerosCalabozosDragones\Ju
 C:\Users\julie\OneDrive\Documentos\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\bin\Debug\JuegoCaballerosCalabozosDragones.pdb
 E:\Facultad\laboratorioII\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.TirarDados.resources
 E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.TirarDados.resources
+E:\UTN FRP\Materias\Año 1 Cuatrimestre 2\Laboratorio II\caballerosCalabozosDragones\JuegoCaballerosCalabozosDragones\obj\Debug\JuegoCaballerosCalabozosDragones.Splash.resources

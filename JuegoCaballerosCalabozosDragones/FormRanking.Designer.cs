@@ -56,7 +56,12 @@
             this.ClientSize = new System.Drawing.Size(257, 348);
             this.Controls.Add(this.lRankingJugadores);
             this.Controls.Add(this.lbRanking);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormRanking";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ranking";
             this.ResumeLayout(false);
