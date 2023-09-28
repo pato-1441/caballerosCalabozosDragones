@@ -34,18 +34,25 @@
             // 
             // lbRanking
             // 
+            this.lbRanking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.lbRanking.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRanking.ForeColor = System.Drawing.SystemColors.Window;
             this.lbRanking.FormattingEnabled = true;
+            this.lbRanking.ItemHeight = 16;
             this.lbRanking.Location = new System.Drawing.Point(12, 43);
             this.lbRanking.Name = "lbRanking";
-            this.lbRanking.Size = new System.Drawing.Size(225, 290);
+            this.lbRanking.Size = new System.Drawing.Size(233, 292);
             this.lbRanking.TabIndex = 0;
             // 
             // lRankingJugadores
             // 
             this.lRankingJugadores.AutoSize = true;
-            this.lRankingJugadores.Location = new System.Drawing.Point(12, 18);
+            this.lRankingJugadores.BackColor = System.Drawing.Color.Transparent;
+            this.lRankingJugadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lRankingJugadores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lRankingJugadores.Location = new System.Drawing.Point(12, 13);
             this.lRankingJugadores.Name = "lRankingJugadores";
-            this.lRankingJugadores.Size = new System.Drawing.Size(111, 13);
+            this.lRankingJugadores.Size = new System.Drawing.Size(184, 20);
             this.lRankingJugadores.TabIndex = 1;
             this.lRankingJugadores.Text = "Ranking de jugadores";
             // 
@@ -53,6 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.tableroFinal;
             this.ClientSize = new System.Drawing.Size(257, 348);
             this.Controls.Add(this.lRankingJugadores);
             this.Controls.Add(this.lbRanking);

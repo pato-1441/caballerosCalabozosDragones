@@ -40,12 +40,17 @@
             // 
             // btnJugar
             // 
-            this.btnJugar.Location = new System.Drawing.Point(345, 244);
+            this.btnJugar.BackColor = System.Drawing.Color.Transparent;
+            this.btnJugar.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.botonJugar;
+            this.btnJugar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnJugar.FlatAppearance.BorderSize = 0;
+            this.btnJugar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(32)))), ((int)(((byte)(1)))));
+            this.btnJugar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJugar.Location = new System.Drawing.Point(309, 244);
             this.btnJugar.Name = "btnJugar";
-            this.btnJugar.Size = new System.Drawing.Size(89, 49);
+            this.btnJugar.Size = new System.Drawing.Size(137, 94);
             this.btnJugar.TabIndex = 0;
-            this.btnJugar.Text = "Jugar";
-            this.btnJugar.UseVisualStyleBackColor = true;
+            this.btnJugar.UseVisualStyleBackColor = false;
             this.btnJugar.Click += new System.EventHandler(this.btnJugar_Click);
             // 
             // rbBasico
@@ -55,7 +60,7 @@
             this.rbBasico.Checked = true;
             this.rbBasico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbBasico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbBasico.Location = new System.Drawing.Point(310, 329);
+            this.rbBasico.Location = new System.Drawing.Point(309, 335);
             this.rbBasico.Name = "rbBasico";
             this.rbBasico.Size = new System.Drawing.Size(78, 22);
             this.rbBasico.TabIndex = 1;
@@ -69,7 +74,7 @@
             this.rbIntermedio.BackColor = System.Drawing.Color.Transparent;
             this.rbIntermedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbIntermedio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbIntermedio.Location = new System.Drawing.Point(394, 329);
+            this.rbIntermedio.Location = new System.Drawing.Point(393, 335);
             this.rbIntermedio.Name = "rbIntermedio";
             this.rbIntermedio.Size = new System.Drawing.Size(105, 22);
             this.rbIntermedio.TabIndex = 2;
@@ -82,7 +87,7 @@
             this.rbExperto.BackColor = System.Drawing.Color.Transparent;
             this.rbExperto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbExperto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbExperto.Location = new System.Drawing.Point(505, 329);
+            this.rbExperto.Location = new System.Drawing.Point(504, 335);
             this.rbExperto.Name = "rbExperto";
             this.rbExperto.Size = new System.Drawing.Size(84, 22);
             this.rbExperto.TabIndex = 3;
@@ -91,32 +96,47 @@
             // 
             // btnDemo
             // 
+            this.btnDemo.BackColor = System.Drawing.Color.Transparent;
+            this.btnDemo.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.botonDemo;
+            this.btnDemo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDemo.FlatAppearance.BorderSize = 0;
+            this.btnDemo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(32)))), ((int)(((byte)(1)))));
+            this.btnDemo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDemo.Location = new System.Drawing.Point(452, 244);
             this.btnDemo.Name = "btnDemo";
-            this.btnDemo.Size = new System.Drawing.Size(89, 49);
+            this.btnDemo.Size = new System.Drawing.Size(136, 94);
             this.btnDemo.TabIndex = 4;
-            this.btnDemo.Text = "Demo";
-            this.btnDemo.UseVisualStyleBackColor = true;
+            this.btnDemo.UseVisualStyleBackColor = false;
             this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(406, 490);
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.botonCDC;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(32)))), ((int)(((byte)(1)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Location = new System.Drawing.Point(377, 438);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(140, 89);
             this.btnSalir.TabIndex = 5;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRanking
             // 
-            this.btnRanking.Location = new System.Drawing.Point(345, 399);
+            this.btnRanking.BackColor = System.Drawing.Color.Transparent;
+            this.btnRanking.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.botonRanking;
+            this.btnRanking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRanking.FlatAppearance.BorderSize = 0;
+            this.btnRanking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(32)))), ((int)(((byte)(1)))));
+            this.btnRanking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRanking.Location = new System.Drawing.Point(377, 363);
             this.btnRanking.Name = "btnRanking";
-            this.btnRanking.Size = new System.Drawing.Size(196, 37);
+            this.btnRanking.Size = new System.Drawing.Size(140, 89);
             this.btnRanking.TabIndex = 6;
-            this.btnRanking.Text = "Ranking";
-            this.btnRanking.UseVisualStyleBackColor = true;
+            this.btnRanking.UseVisualStyleBackColor = false;
             this.btnRanking.Click += new System.EventHandler(this.btnRanking_Click);
             // 
             // Form1

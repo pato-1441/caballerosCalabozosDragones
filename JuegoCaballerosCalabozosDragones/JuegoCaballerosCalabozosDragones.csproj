@@ -177,5 +177,29 @@
   <ItemGroup>
     <None Include="Resources\splash.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoNombreJugador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonAceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonJugar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonSalir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonRanking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonDemo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonCDC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableroFinal2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

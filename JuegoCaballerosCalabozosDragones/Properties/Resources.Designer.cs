@@ -73,6 +73,66 @@ namespace JuegoCaballerosCalabozosDragones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botonAceptar {
+            get {
+                object obj = ResourceManager.GetObject("botonAceptar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonCDC {
+            get {
+                object obj = ResourceManager.GetObject("botonCDC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonDemo {
+            get {
+                object obj = ResourceManager.GetObject("botonDemo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonJugar {
+            get {
+                object obj = ResourceManager.GetObject("botonJugar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonRanking {
+            get {
+                object obj = ResourceManager.GetObject("botonRanking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonSalir {
+            get {
+                object obj = ResourceManager.GetObject("botonSalir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caballeroAmarillo {
             get {
                 object obj = ResourceManager.GetObject("caballeroAmarillo", resourceCulture);
@@ -173,6 +233,16 @@ namespace JuegoCaballerosCalabozosDragones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondoNombreJugador {
+            get {
+                object obj = ResourceManager.GetObject("fondoNombreJugador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mesa_de_trabajo_1 {
             get {
                 object obj = ResourceManager.GetObject("Mesa de trabajo 1", resourceCulture);
@@ -196,6 +266,16 @@ namespace JuegoCaballerosCalabozosDragones.Properties {
         internal static System.Drawing.Bitmap Tablero {
             get {
                 object obj = ResourceManager.GetObject("Tablero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tableroFinal {
+            get {
+                object obj = ResourceManager.GetObject("tableroFinal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

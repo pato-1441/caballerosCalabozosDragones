@@ -62,7 +62,7 @@ namespace JuegoCaballerosCalabozosDragones
             Jugador jugadorJugando = ((Jugador)jugadores[turno]);
             if (!(jugadorJugando.PierdeTurno))
             {
-               // if(dificultad > 0)
+               if(dificultad > 0)
                     for (int i = 0; i < jugadorJugando.Dragones.Length; i++)
                     {
                         //quitar dragon de la casilla
