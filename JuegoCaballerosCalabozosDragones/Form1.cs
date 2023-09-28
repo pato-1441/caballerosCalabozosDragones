@@ -34,18 +34,17 @@ namespace JuegoCaballerosCalabozosDragones
         {
             Splash ventanaSplash = new Splash();
             ventanaSplash.ShowDialog();
-            directorioBase = Application.StartupPath.Split('\\');        //Cambio Sonido
+            directorioBase = Application.StartupPath.Split('\\');       
             for (int i = 0; i < directorioBase.Length - 2; i++) directorioReal += directorioBase[i] + "/";
             CancionInicio();
             sistema = new Sistema();
             jugadas = new ArrayList();
             reversa = new ArrayList();
         }
-        private void CancionInicio()    //Cambio Sonido
+        private void CancionInicio()    
         {
 
             musica.SoundLocation = directorioReal + "Sonidos/SonidoInicioRecortado.wav";
-            //musica.SoundLocation = directorioReal;
             if(sonido)musica.PlayLooping();
         }
         private void CancionJuego()
@@ -82,18 +81,12 @@ namespace JuegoCaballerosCalabozosDragones
                     color = 3;
                 if (modal.tbNombre.Text != "")
                 {
-                    musica.Stop();          //Cambio Sonido
+                    musica.Stop();         
                     CancionJuego();
 
                     jugo = true;
                     sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
                                         dificultad, modal.tbNombre.Text, color);
-                        
-
-                   /* formTablero.pbCaballeroVerde.Location = new Point(330, 90);
-                    formTablero.pbCaballeroRojo.Location = new Point(344, 90);
-                    formTablero.pbCaballeroAzul.Location = new Point(367, 90);
-                    formTablero.pbCaballeroAmarillo.Location = new Point(389, 90);*/
 
                     if (dificultad > 1) MoverCalabozo(sistema.PartidaActual.Calabozos, formTablero);
                     else
@@ -172,7 +165,6 @@ namespace JuegoCaballerosCalabozosDragones
                                    if (dificultad > 0)
                                     {
                                         int[] murieron = { 1, 1 };
-                                        //jugadas.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
                                         if (!MoverDragon(jugadorActual.Caballero.Color, murieron, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                                     }
                                     jugadas.Add(jugadorActual.Nombre + " murió.");
@@ -218,7 +210,7 @@ namespace JuegoCaballerosCalabozosDragones
                 }
                 else MessageBox.Show("Debe ingresar un nombre.");
             }
-            musica.Stop(); //Cambio Sonido
+            musica.Stop(); 
             CancionInicio();
         }
 
@@ -244,10 +236,7 @@ namespace JuegoCaballerosCalabozosDragones
                     dificultad = 2;
 
                 sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value), dificultad);
-               /* formTablero.pbCaballeroVerde.Location = new Point(330, 90);
-                formTablero.pbCaballeroRojo.Location = new Point(344, 90);
-                formTablero.pbCaballeroAzul.Location = new Point(389, 90);
-                formTablero.pbCaballeroAmarillo.Location = new Point(330, 90);*/
+
                 if(dificultad>1)MoverCalabozo(sistema.PartidaActual.Calabozos, formTablero);
                 else
                 {
@@ -271,21 +260,17 @@ namespace JuegoCaballerosCalabozosDragones
                             if (dificultad > 0)
                             {
                                 jugadas.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
-                               // if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                             }
 
                             jugadas.Add(jugadorActual.Nombre + " se movió a la posición: " + movimientoJugador);
-                            //if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
 
                             break;
                         case 1:
                             if (dificultad > 0)
                             {
                                 jugadas.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
-                               // if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                             }
                             jugadas.Add(jugadorActual.Nombre + " avanzó 5 posiciones hacia la posición: " + movimientoJugador);
-                           // if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
 
                             break;
                         case 2:
@@ -295,27 +280,18 @@ namespace JuegoCaballerosCalabozosDragones
                             if (dificultad > 0)
                             {
                                 jugadas.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
-                              //  if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                             }
                             jugadas.Add(jugadorActual.Nombre + " retrocedió 5 posiciones hacia la posición: " + movimientoJugador);
-                            //if (!MoverCaballero(jugadorActual.Caballero.Color, movimientoJugador, formTablero)) MessageBox.Show("No se pudo realizar el movimiento");
 
                             break;
                         case 4:
                             if (dificultad > 0)
                             {
                                 jugadas.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
-                                //if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
                             }
                             jugadas.Add(jugadorActual.Nombre + " perdió su turno.");
                             break;
                         case 5:
-                            /*if (dificultad > 0)
-                            {
-                                jugadas.Add("Los dragones de " + jugadorActual.Nombre + " se movieron a las posiciones: " + movimientoDragones[0] + " y " + movimientoDragones[1]);
-                                if (!MoverDragon(jugadorActual.Caballero.Color, movimientoDragones, formTablero)) MessageBox.Show("No se pudieron mover los dragones");
-                            }*/
-
                             jugadas.Add(jugadorActual.Nombre + " puede jugar en la próxima.");
                             break;
 
@@ -489,3 +465,21 @@ namespace JuegoCaballerosCalabozosDragones
         
     }
 }
+/*
+ © 2023 Abella, Albornoz y Rutar. Todos los derechos reservados.
+
+Este videojuego, incluyendo su código fuente, gráficos, música, efectos de sonido y cualquier otro material relacionado, está protegido por las leyes de derechos de autor y otras leyes aplicables. Queda estrictamente prohibida la reproducción, distribución, exhibición pública, ingeniería inversa o cualquier otro uso no autorizado de este videojuego, en su totalidad o en parte, sin el permiso expreso por escrito de Abella, Albornoz y Rutar.
+
+Cualquier infracción de nuestros derechos de autor dará lugar a acciones legales y a la búsqueda de daños y perjuicios conforme a la ley.
+
+Para solicitar permisos o para cualquier pregunta relacionada con los derechos de autor de este videojuego, por favor contáctenos en:
+
+Abella Matias, Albornoz Patricio, Rutar Julieta
+Dirección: Universidad Tecnológica Nacional. Av. Almafuerte 1033, E3100 Paraná, Entre Ríos
+Correo electrónico: matiasabella@alu.frp.utn.edu.ar, patricioalbornoz@alu.frp.utn.edu.ar, julietarutar@alu.frp.utn.edu.ar
+
+Todas las marcas registradas y nombres comerciales mencionados en este videojuego son propiedad de sus respectivos propietarios y se utilizan aquí solo con fines informativos y educativos.
+
+Última actualización: 28/09/2023
+
+ */

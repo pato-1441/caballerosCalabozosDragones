@@ -10,7 +10,6 @@ namespace JuegoCaballerosCalabozosDragones
     {
         ArrayList dragones = new ArrayList();
         bool calabozos = false;
-        //bool caballero;
         public ArrayList Dragones
         {
             get { return dragones; }

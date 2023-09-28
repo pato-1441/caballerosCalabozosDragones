@@ -70,7 +70,7 @@ namespace JuegoCaballerosCalabozosDragones
                     
                         int movimientoDragon = dado.Next(1, 51);
                         //moverlo
-                        moverDragon[i] = jugadorJugando.Dragones[i].Mover(movimientoDragon);    //Hice que mover dragon sea un vector
+                        moverDragon[i] = jugadorJugando.Dragones[i].Mover(movimientoDragon);   
                         //agregar dragon de la casilla
                         tablero[movimientoDragon].AgregarDragon(jugadorJugando.Dragones[i]);
                     }
@@ -107,12 +107,12 @@ namespace JuegoCaballerosCalabozosDragones
             }
             if (turno >= (jugadores.Count - 1))
             {
-                movimientoCaballero = jugadorJugando.Caballero.Posicion; //Agregué esta linea de código
+                movimientoCaballero = jugadorJugando.Caballero.Posicion;
                 turno = 0;
             }
             else
             {
-                movimientoCaballero = jugadorJugando.Caballero.Posicion; //Agregué esta linea de código
+                movimientoCaballero = jugadorJugando.Caballero.Posicion;
                 turno++;
 
             }
@@ -121,10 +121,10 @@ namespace JuegoCaballerosCalabozosDragones
             {
                 ganador = jugadorJugando;
                 hayGanador = true;
-            }//Agregué esta linea de código
+            }
 
             //si es necesario, volver a moverse
-            return moverPieza;//Cambié movimiento por moverPieza
+            return moverPieza;
         }
 
 
@@ -164,8 +164,6 @@ namespace JuegoCaballerosCalabozosDragones
                 coloresDisponibles.Add(i);
             }
         }
-
-        //string nombre, bool humano, int dificultad, int color
         private void CrearJugadorHumano(string nombre, int color)
         {
             jugadores.Add(new Jugador(nombre, true, dificultad, color, tablero[1]));
