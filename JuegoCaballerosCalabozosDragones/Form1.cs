@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,9 @@ namespace JuegoCaballerosCalabozosDragones
         }
         Sistema sistema;
         ArrayList jugadas, reversa;
+        SoundPlayer musica = new SoundPlayer();
+        string[] directorioBase;
+        string directorioReal = "";
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -29,11 +33,25 @@ namespace JuegoCaballerosCalabozosDragones
         {
             Splash ventanaSplash = new Splash();
             ventanaSplash.ShowDialog();
+            directorioBase = Application.StartupPath.Split('\\');        //Cambio Sonido
+            for (int i = 0; i < directorioBase.Length - 2; i++) directorioReal += directorioBase[i] + "/";
+            CancionInicio();
             sistema = new Sistema();
             jugadas = new ArrayList();
             reversa = new ArrayList();
         }
-        
+        private void CancionInicio()    //Cambio Sonido
+        {
+
+            musica.SoundLocation = directorioReal + "Sonidos/SonidoInicioRecortado.wav";
+            //musica.SoundLocation = directorioReal;
+            musica.PlayLooping();
+        }
+        private void CancionJuego()
+        {
+            musica.SoundLocation = directorioReal + "Sonidos/SonidoJuegoRecortado.wav";
+            musica.PlayLooping();
+        }
         private async void btnJugar_Click(object sender, EventArgs e)
         {
             jugadas.Clear();
@@ -63,6 +81,9 @@ namespace JuegoCaballerosCalabozosDragones
                     color = 3;
                 if (modal.tbNombre.Text != "")
                 {
+                    musica.Stop();          //Cambio Sonido
+                    CancionJuego();
+
                     jugo = true;
                     sistema.CrearPartida(Convert.ToInt32(modal.nudCantJugadores.Value),
                                         dificultad, modal.tbNombre.Text, color);
@@ -196,6 +217,8 @@ namespace JuegoCaballerosCalabozosDragones
                 }
                 else MessageBox.Show("Debe ingresar un nombre.");
             }
+            musica.Stop(); //Cambio Sonido
+            CancionInicio();
         }
 
         private void btnDemo_Click(object sender, EventArgs e)
