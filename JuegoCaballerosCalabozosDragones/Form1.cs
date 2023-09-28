@@ -24,6 +24,7 @@ namespace JuegoCaballerosCalabozosDragones
         SoundPlayer musica = new SoundPlayer();
         string[] directorioBase;
         string directorioReal = "";
+        bool sonido = true;
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -45,12 +46,12 @@ namespace JuegoCaballerosCalabozosDragones
 
             musica.SoundLocation = directorioReal + "Sonidos/SonidoInicioRecortado.wav";
             //musica.SoundLocation = directorioReal;
-            musica.PlayLooping();
+            if(sonido)musica.PlayLooping();
         }
         private void CancionJuego()
         {
             musica.SoundLocation = directorioReal + "Sonidos/SonidoJuegoRecortado.wav";
-            musica.PlayLooping();
+            if (sonido) musica.PlayLooping();
         }
         private async void btnJugar_Click(object sender, EventArgs e)
         {
@@ -467,6 +468,12 @@ namespace JuegoCaballerosCalabozosDragones
             }
         }
 
+        private void btnSonido_Click(object sender, EventArgs e)
+        {
+            if (sonido) musica.Stop();
+            else musica.PlayLooping();
+            sonido = !sonido;
+        }
 
         private void btnRanking_Click(object sender, EventArgs e)
         {

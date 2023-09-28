@@ -36,6 +36,7 @@
             this.btnDemo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRanking = new System.Windows.Forms.Button();
+            this.btnSonido = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJugar
@@ -139,6 +140,18 @@
             this.btnRanking.UseVisualStyleBackColor = false;
             this.btnRanking.Click += new System.EventHandler(this.btnRanking_Click);
             // 
+            // btnSonido
+            // 
+            this.btnSonido.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSonido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSonido.BackgroundImage")));
+            this.btnSonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSonido.Location = new System.Drawing.Point(838, 494);
+            this.btnSonido.Name = "btnSonido";
+            this.btnSonido.Size = new System.Drawing.Size(40, 34);
+            this.btnSonido.TabIndex = 7;
+            this.btnSonido.UseVisualStyleBackColor = false;
+            this.btnSonido.Click += new System.EventHandler(this.btnSonido_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +159,7 @@
             this.BackgroundImage = global::JuegoCaballerosCalabozosDragones.Properties.Resources.Mesa_de_trabajo_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(887, 537);
+            this.Controls.Add(this.btnSonido);
             this.Controls.Add(this.btnRanking);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDemo);
@@ -172,6 +186,7 @@
         private System.Windows.Forms.Button btnDemo;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRanking;
+        private System.Windows.Forms.Button btnSonido;
     }
 }
 
