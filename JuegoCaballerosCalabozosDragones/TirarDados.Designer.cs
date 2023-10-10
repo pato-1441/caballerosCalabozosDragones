@@ -44,9 +44,10 @@
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSalir.Location = new System.Drawing.Point(11, 123);
+            this.btnSalir.Location = new System.Drawing.Point(7, 151);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(258, 60);
+            this.btnSalir.Size = new System.Drawing.Size(344, 74);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.UseVisualStyleBackColor = false;
             // 
@@ -60,25 +61,25 @@
             this.btnTirarDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btnTirarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTirarDados.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTirarDados.Location = new System.Drawing.Point(11, 11);
-            this.btnTirarDados.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTirarDados.Location = new System.Drawing.Point(15, 14);
+            this.btnTirarDados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTirarDados.Name = "btnTirarDados";
-            this.btnTirarDados.Size = new System.Drawing.Size(259, 99);
+            this.btnTirarDados.Size = new System.Drawing.Size(345, 122);
             this.btnTirarDados.TabIndex = 0;
             this.btnTirarDados.UseVisualStyleBackColor = false;
             // 
             // TirarDados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(281, 195);
+            this.ClientSize = new System.Drawing.Size(375, 240);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnTirarDados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(300, 600);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Location = new System.Drawing.Point(25, 575);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TirarDados";

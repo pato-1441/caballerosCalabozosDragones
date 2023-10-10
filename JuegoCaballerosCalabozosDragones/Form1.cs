@@ -200,6 +200,7 @@ namespace JuegoCaballerosCalabozosDragones
                                 jugadas.Add(jugadorActual.Nombre + " ganó.");
 
                                 sistema.AgregarJugadorRanking();
+                                formTablero.btnSalir.Visible = true;
                                 MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
                                 tirarDados.Dispose();
 
@@ -299,6 +300,7 @@ namespace JuegoCaballerosCalabozosDragones
                     ActualizarListBox(formTablero.lbEstado);
                     if (hayGanador)
                     {
+                        formTablero.btnSalir.Visible = true;
                         jugadas.Add(((Jugador)sistema.PartidaActual.Ganador).Nombre + " ganó.");
                         MessageBox.Show("¡El jugador ganador es " + ((Jugador)sistema.PartidaActual.Ganador).Nombre.ToString() + ", felicidades!");
                     }

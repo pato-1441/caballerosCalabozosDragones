@@ -90,6 +90,7 @@
             this.btnSalir.Size = new System.Drawing.Size(258, 60);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Visible = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // pbCalabozo1
